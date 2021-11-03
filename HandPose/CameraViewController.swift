@@ -537,14 +537,19 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             frameCounter = 0
             poseObservations = []
             currentIndex = currentIndex + 1
-            if currentIndex >= textToGet.count {
-                //animateSignResult(letter: nil)
-                resetSetup()
-                return
+            var nextChar : String = ""
+            while true {
+                let index = textToGet.index(textToGet.startIndex, offsetBy: currentIndex)
+                if currentIndex >= textToGet.count {
+                    //animateSignResult(letter: nil)
+                    resetSetup()
+                    return
+                }
+                nextChar = String(textToGet[index])
+                if nextChar != " " { break }
+                currentIndex = currentIndex + 1
             }
-            let index = textToGet.index(textToGet.startIndex, offsetBy: currentIndex)
-            let nextChar = textToGet[index]
-            setupNextCharacter(nextChar: nextChar)
+            setupNextCharacter(nextChar: Character(nextChar))
         }
     }
     
