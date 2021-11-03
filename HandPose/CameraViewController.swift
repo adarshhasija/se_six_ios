@@ -539,6 +539,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             currentIndex = currentIndex + 1
             var nextChar : String = ""
             while true {
+                //loop to account for spaces
                 let index = textToGet.index(textToGet.startIndex, offsetBy: currentIndex)
                 if currentIndex >= textToGet.count {
                     //animateSignResult(letter: nil)
