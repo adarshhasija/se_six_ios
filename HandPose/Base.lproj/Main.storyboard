@@ -37,6 +37,14 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Change"/>
                                     </button>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Px-ZI-lax">
+                                        <rect key="frame" x="0.0" y="73" width="75" height="73"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="7as-5e-mXa"/>
+                                            <constraint firstAttribute="height" constant="75" id="gMw-xW-PMF"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OYh-6r-Sk9" secondAttribute="trailing" id="38A-50-5Rb"/>
@@ -106,6 +114,7 @@
                         <outlet property="topButton" destination="rEL-Vd-OOs" id="j7A-ez-ReD"/>
                         <outlet property="topLabel" destination="OYh-6r-Sk9" id="BaD-Zf-JP2"/>
                         <outlet property="topStackViewStoryboard" destination="dk6-6T-d6F" id="8j9-7u-dG1"/>
+                        <outlet property="warningImageView" destination="9Px-ZI-lax" id="bqt-dQ-Ygy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ymu-cL-6aO">
-                                <rect key="frame" x="10" y="44" width="394" height="114.5"/>
+                                <rect key="frame" x="10" y="44" width="394" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6os-qs-Lsh">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
@@ -171,8 +180,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3P-7O-SpA">
-                                        <rect key="frame" x="0.0" y="64.5" width="394" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3P-7O-SpA">
+                                        <rect key="frame" x="0.0" y="64.5" width="394" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -180,6 +189,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6os-qs-Lsh" secondAttribute="trailing" id="Yz4-Z5-Ow6"/>
+                                    <constraint firstAttribute="trailing" secondItem="E3P-7O-SpA" secondAttribute="trailing" id="uOM-tH-7KU"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -203,6 +213,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="112"/>
         <image name="open_hand" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,6 +226,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

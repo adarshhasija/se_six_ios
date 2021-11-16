@@ -12,6 +12,7 @@ import UIKit
 class CustomTextViewController : UIViewController {
     
     var delegateCameraView : CameraViewControllerProtocol? = nil
+    let maxLength = 26
     
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -21,10 +22,10 @@ class CustomTextViewController : UIViewController {
         if textField?.text?.isEmpty == false {
             let text = textField!.text!.uppercased()
             let lettersAndSpacesCharacterSet = CharacterSet.letters.union(.whitespaces).inverted
-            let letters = CharacterSet.letters.inverted
-             let testValid1 = text.rangeOfCharacter(from: letters) == nil
+             let testValid1 = text.rangeOfCharacter(from: lettersAndSpacesCharacterSet) == nil
              if testValid1 == true {
-                 self.delegateCameraView?.newTextReceived(text: text)
+                 let trimmedString = text.trimmingCharacters(in: .whitespaces)
+                 self.delegateCameraView?.newTextReceived(text: trimmedString)
                  self.navigationController?.dismiss(animated: true, completion: nil)
              }
              else {
@@ -46,7 +47,7 @@ class CustomTextViewController : UIViewController {
     }
     
     override func viewDidLoad() {
-        instructionLabel.text = "Enter the name of a person or a place. Letters only. Max 10 characters."
+        instructionLabel.text = "Enter the name of a person or a place. Letters only. Max " + String(maxLength) + " characters."
         textField.placeholder = "eg: Rohan"
         textField.delegate = self
         
@@ -59,7 +60,6 @@ class CustomTextViewController : UIViewController {
 extension CustomTextViewController : UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let maxLength = 10
         let currentString: NSString = (textField.text ?? "") as NSString
         let newString: NSString =
                 currentString.replacingCharacters(in: range, with: string) as NSString

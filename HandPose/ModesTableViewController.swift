@@ -17,8 +17,10 @@ class ModesTableViewController : UITableViewController {
     
     let modes = [
         Mode(name: "Enter name"),
+        Mode(name: "SIGN KARO"),
         Mode(name: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
-        Mode(name: "JZAECMINOSYT")
+        Mode(name: "ASIA"),
+        Mode(name: "CUBBON PARK") 
     ]
     
     var delegateCameraView : CameraViewControllerProtocol? = nil
