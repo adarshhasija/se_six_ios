@@ -25,7 +25,8 @@ class CustomTextViewController : UIViewController {
              let testValid1 = text.rangeOfCharacter(from: lettersAndSpacesCharacterSet) == nil
              if testValid1 == true {
                  let trimmedString = text.trimmingCharacters(in: .whitespaces)
-                 self.delegateCameraView?.newTextReceived(text: trimmedString)
+                 let content = Content(text: trimmedString)
+                 self.delegateCameraView?.newContentReceived(content: content)
                  self.navigationController?.dismiss(animated: true, completion: nil)
              }
              else {
