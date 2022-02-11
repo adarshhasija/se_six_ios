@@ -33,7 +33,7 @@ class ModesTableViewController : UITableViewController {
         //Content(text: "USA", isFingerspelling: true, isPose: true),
         //Content(text: "Which", isFingerspelling: false, isPose: false), //works but needs 2 hands
         //Content(text: "Car", isFingerspelling: false, isPose: false), //Not yet done
-        //Content(text: "YourWelcome", isFingerspelling: false, isPose: false), //too reactive
+        //Content(text: "YourWelcome", isFingerspelling: false, isPose: false), //too reactive at 1. not working at 0.5
         Content(text: "Where", isFingerspelling: false, isPose: false), //not working
         //Content(text: "I Love You", isFingerspelling: false, isPose: true), //works but possibly awkward
         //Content(text: "Come", isFingerspelling: false, isPose: false, signLangType: "Indian Sign Language"),

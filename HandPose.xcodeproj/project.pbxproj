@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3105B2FF27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B2FE27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel */; };
+		3105B30127B61A20001DA13F /* ASL_YourWelcome2_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30027B61A20001DA13F /* ASL_YourWelcome2_0_5strain.mlmodel */; };
+		3105B30327B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */; };
+		3105B30527B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */; };
+		3105B30727B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30627B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel */; };
 		3133B11827B55E9500C5432E /* ASL_Y2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0EF27B55E9300C5432E /* ASL_Y2.mlmodel */; };
 		3133B11927B55E9500C5432E /* ASL_1TO10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F027B55E9300C5432E /* ASL_1TO10.mlmodel */; };
 		3133B11A27B55E9500C5432E /* ASL_ILoveYou.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F127B55E9300C5432E /* ASL_ILoveYou.mlmodel */; };
@@ -74,6 +79,10 @@
 		3133B17027B55ECF00C5432E /* ISL_ComeGo_2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B15827B55ECF00C5432E /* ISL_ComeGo_2s_1strain.mlmodel */; };
 		3133B17227B55FE600C5432E /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133B17127B55FE600C5432E /* Content.swift */; };
 		3133B17427B560D200C5432E /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133B17327B560D100C5432E /* MyTableViewCell.swift */; };
+		314D2F1B27B56FCD00EF7D3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314D2F1A27B56FCD00EF7D3A /* GoogleService-Info.plist */; };
+		314D2F1E27B5722600EF7D3A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 314D2F1D27B5722600EF7D3A /* FirebaseAnalytics */; };
+		314D2F2027B5722600EF7D3A /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 314D2F1F27B5722600EF7D3A /* FirebaseAnalyticsSwift-Beta */; };
+		314D2F2227B58B3B00EF7D3A /* ASL_Later_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 314D2F2127B58B3A00EF7D3A /* ASL_Later_0_5strain.mlmodel */; };
 		319F769127B5624D0072850D /* ASL_Yes_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */; };
 		319F769227B5624D0072850D /* ASL_No_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */; };
 		31E15918272E27E000984649 /* ASL_Z2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */; };
@@ -95,6 +104,11 @@
 
 /* Begin PBXFileReference section */
 		26547FACF06954AF783E23D9 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		3105B2FE27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Where_0_5strain.mlmodel; sourceTree = "<group>"; };
+		3105B30027B61A20001DA13F /* ASL_YourWelcome2_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_YourWelcome2_0_5strain.mlmodel; sourceTree = "<group>"; };
+		3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Bathroom_0_5strain.mlmodel; sourceTree = "<group>"; };
+		3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Goodbye_0_5strain.mlmodel; sourceTree = "<group>"; };
+		3105B30627B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Milk_0_5strain.mlmodel; sourceTree = "<group>"; };
 		3133B0EF27B55E9300C5432E /* ASL_Y2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Y2.mlmodel; sourceTree = "<group>"; };
 		3133B0F027B55E9300C5432E /* ASL_1TO10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_1TO10.mlmodel; sourceTree = "<group>"; };
 		3133B0F127B55E9300C5432E /* ASL_ILoveYou.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou.mlmodel; sourceTree = "<group>"; };
@@ -162,6 +176,8 @@
 		3133B15827B55ECF00C5432E /* ISL_ComeGo_2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_ComeGo_2s_1strain.mlmodel; sourceTree = "<group>"; };
 		3133B17127B55FE600C5432E /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		3133B17327B560D100C5432E /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		314D2F1A27B56FCD00EF7D3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		314D2F2127B58B3A00EF7D3A /* ASL_Later_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Later_0_5strain.mlmodel; sourceTree = "<group>"; };
 		319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Yes_0_5strain.mlmodel; sourceTree = "<group>"; };
 		319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_No_0_5strain.mlmodel; sourceTree = "<group>"; };
 		31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Z2s_1strain.mlmodel; sourceTree = "<group>"; };
@@ -190,6 +206,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				314D2F2027B5722600EF7D3A /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				314D2F1E27B5722600EF7D3A /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +276,12 @@
 		31E159332732808C00984649 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				3105B30627B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel */,
+				3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */,
+				3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */,
+				3105B30027B61A20001DA13F /* ASL_YourWelcome2_0_5strain.mlmodel */,
+				3105B2FE27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel */,
+				314D2F2127B58B3A00EF7D3A /* ASL_Later_0_5strain.mlmodel */,
 				319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */,
 				319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */,
 				3133B14927B55ECE00C5432E /* ASL_Bathroom_2s_1strain.mlmodel */,
@@ -327,6 +351,7 @@
 		C4EB82E9248AEB7B00CD7D41 /* HandPose */ = {
 			isa = PBXGroup;
 			children = (
+				314D2F1A27B56FCD00EF7D3A /* GoogleService-Info.plist */,
 				3133B17327B560D100C5432E /* MyTableViewCell.swift */,
 				3133B17127B55FE600C5432E /* Content.swift */,
 				31E159312732807100984649 /* MLModels */,
@@ -363,6 +388,10 @@
 			dependencies = (
 			);
 			name = HandPose;
+			packageProductDependencies = (
+				314D2F1D27B5722600EF7D3A /* FirebaseAnalytics */,
+				314D2F1F27B5722600EF7D3A /* FirebaseAnalyticsSwift-Beta */,
+			);
 			productName = HandPose;
 			productReference = C4EB82E7248AEB7B00CD7D41 /* HandPose.app */;
 			productType = "com.apple.product-type.application";
@@ -391,6 +420,9 @@
 				Base,
 			);
 			mainGroup = C4EB82DE248AEB7B00CD7D41;
+			packageReferences = (
+				314D2F1C27B5722600EF7D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C4EB82E8248AEB7B00CD7D41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -406,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4EB82F7248AEB7B00CD7D41 /* LaunchScreen.storyboard in Resources */,
+				314D2F1B27B56FCD00EF7D3A /* GoogleService-Info.plist in Resources */,
 				C4EB82F4248AEB7B00CD7D41 /* Assets.xcassets in Resources */,
 				C4EB82F2248AEB7B00CD7D41 /* Main.storyboard in Resources */,
 			);
@@ -433,6 +466,7 @@
 				3133B16627B55ECF00C5432E /* ISL_ComeGo2_2s_1strain.mlmodel in Sources */,
 				3133B13D27B55E9500C5432E /* ASL_KRUV10.mlmodel in Sources */,
 				3133B13827B55E9500C5432E /* ISL_0TO9_9.mlmodel in Sources */,
+				3105B30727B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel in Sources */,
 				3133B16127B55ECF00C5432E /* ASL_Bathroom_2s_1strain.mlmodel in Sources */,
 				3133B16C27B55ECF00C5432E /* ASL_Later2_2s_1strain.mlmodel in Sources */,
 				3133B13127B55E9500C5432E /* ASL_KRUV5.mlmodel in Sources */,
@@ -449,6 +483,7 @@
 				3133B12927B55E9500C5432E /* ASL_GH23.mlmodel in Sources */,
 				3133B12827B55E9500C5432E /* ASL_RU13.mlmodel in Sources */,
 				3133B15D27B55ECF00C5432E /* ASL_Where2_2s_1strain.mlmodel in Sources */,
+				3105B30327B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel in Sources */,
 				3133B12F27B55E9500C5432E /* ASL_MN22.mlmodel in Sources */,
 				3133B15A27B55ECF00C5432E /* ASL_No2_2s_1strain.mlmodel in Sources */,
 				3133B13027B55E9500C5432E /* ASL_MNTA2.mlmodel in Sources */,
@@ -456,6 +491,7 @@
 				C475655E248AEBD900F111B8 /* HandGestureProcessor.swift in Sources */,
 				3133B13E27B55E9500C5432E /* ASL_MinusJZ.mlmodel in Sources */,
 				3133B12D27B55E9500C5432E /* ASL_MinusJZ_4.mlmodel in Sources */,
+				3105B30127B61A20001DA13F /* ASL_YourWelcome2_0_5strain.mlmodel in Sources */,
 				3133B16927B55ECF00C5432E /* ASL_Where4.mlmodel in Sources */,
 				3133B13A27B55E9500C5432E /* ASL_B.mlmodel in Sources */,
 				3133B16527B55ECF00C5432E /* ASL_Which.mlmodel in Sources */,
@@ -469,6 +505,7 @@
 				3133B16F27B55ECF00C5432E /* ASL_YourWelcome_2s_1strain.mlmodel in Sources */,
 				3133B12427B55E9500C5432E /* ASL_ATNM.mlmodel in Sources */,
 				3133B11A27B55E9500C5432E /* ASL_ILoveYou.mlmodel in Sources */,
+				3105B30527B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel in Sources */,
 				3133B11E27B55E9500C5432E /* ASL_AEMNST.mlmodel in Sources */,
 				3133B13427B55E9500C5432E /* ASL_PQ3.mlmodel in Sources */,
 				3133B15927B55ECF00C5432E /* ISL_Onam_2s_1strain.mlmodel in Sources */,
@@ -483,11 +520,13 @@
 				3133B17227B55FE600C5432E /* Content.swift in Sources */,
 				3133B16227B55ECF00C5432E /* ASL_Christmas2_0_5strain.mlmodel in Sources */,
 				3133B16027B55ECF00C5432E /* ASL_Christmas2.mlmodel in Sources */,
+				3105B2FF27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel in Sources */,
 				3133B13B27B55E9500C5432E /* ISL_0TO9_10.mlmodel in Sources */,
 				3133B15F27B55ECF00C5432E /* ASL_No4.mlmodel in Sources */,
 				3133B11C27B55E9500C5432E /* ASL_BFW.mlmodel in Sources */,
 				3133B15C27B55ECF00C5432E /* ASL_Christmas.mlmodel in Sources */,
 				3133B15B27B55ECF00C5432E /* ASL_No3_2s_1strain.mlmodel in Sources */,
+				314D2F2227B58B3B00EF7D3A /* ASL_Later_0_5strain.mlmodel in Sources */,
 				3133B13927B55E9500C5432E /* ASL_E3.mlmodel in Sources */,
 				3133B13327B55E9500C5432E /* ASL_DLX.mlmodel in Sources */,
 				31E159302731B2C300984649 /* MyNavigationController.swift in Sources */,
@@ -712,6 +751,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		314D2F1C27B5722600EF7D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		314D2F1D27B5722600EF7D3A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314D2F1C27B5722600EF7D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		314D2F1F27B5722600EF7D3A /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314D2F1C27B5722600EF7D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C4EB82DF248AEB7B00CD7D41 /* Project object */;
 }
