@@ -12,6 +12,26 @@
 		3105B30327B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */; };
 		3105B30527B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */; };
 		3105B30727B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30627B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel */; };
+		3105B30F27B6489B001DA13F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30E27B6489B001DA13F /* AppDelegate.swift */; };
+		3105B31127B6489B001DA13F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B31027B6489B001DA13F /* SceneDelegate.swift */; };
+		3105B31327B6489B001DA13F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B31227B6489B001DA13F /* ViewController.swift */; };
+		3105B31627B6489B001DA13F /* Main_xcode_created.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3105B31427B6489B001DA13F /* Main_xcode_created.storyboard */; };
+		3105B31827B6489D001DA13F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3105B31727B6489D001DA13F /* Assets.xcassets */; };
+		3105B31B27B6489D001DA13F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3105B31927B6489D001DA13F /* LaunchScreen.storyboard */; };
+		3105B32727B6489E001DA13F /* RecognizeOneSignCipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B32627B6489E001DA13F /* RecognizeOneSignCipTests.swift */; };
+		3105B33127B6489E001DA13F /* RecognizeOneSignCipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B33027B6489E001DA13F /* RecognizeOneSignCipUITests.swift */; };
+		3105B33327B6489E001DA13F /* RecognizeOneSignCipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B33227B6489E001DA13F /* RecognizeOneSignCipUITestsLaunchTests.swift */; };
+		3105B33627B6489E001DA13F /* RecognizeOneSignCip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 3105B30C27B6489B001DA13F /* RecognizeOneSignCip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3105B34227B648E8001DA13F /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133B17127B55FE600C5432E /* Content.swift */; };
+		3105B34327B648F1001DA13F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655A248AEBD800F111B8 /* CameraView.swift */; };
+		3105B34527B6491E001DA13F /* HandGestureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655B248AEBD800F111B8 /* HandGestureProcessor.swift */; };
+		3105B34727B64935001DA13F /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1592F2731B2C300984649 /* MyNavigationController.swift */; };
+		3105B34B27B64D30001DA13F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3105B34927B64D30001DA13F /* Main.storyboard */; };
+		3105B34D27B64D90001DA13F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B34C27B64D90001DA13F /* CameraViewController.swift */; };
+		3105B35027B66575001DA13F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3105B34F27B66575001DA13F /* FirebaseAnalytics */; };
+		3105B35227B66575001DA13F /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3105B35127B66575001DA13F /* FirebaseAnalyticsSwift-Beta */; };
+		3105B35527B66B12001DA13F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314D2F1A27B56FCD00EF7D3A /* GoogleService-Info.plist */; };
+		3105B35727B68F19001DA13F /* ASL_ILoveYou.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B35627B68F19001DA13F /* ASL_ILoveYou.mlmodel */; };
 		3133B11827B55E9500C5432E /* ASL_Y2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0EF27B55E9300C5432E /* ASL_Y2.mlmodel */; };
 		3133B11927B55E9500C5432E /* ASL_1TO10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F027B55E9300C5432E /* ASL_1TO10.mlmodel */; };
 		3133B11A27B55E9500C5432E /* ASL_ILoveYou.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F127B55E9300C5432E /* ASL_ILoveYou.mlmodel */; };
@@ -102,6 +122,37 @@
 		C4EB82F7248AEB7B00CD7D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EB82F5248AEB7B00CD7D41 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3105B32327B6489E001DA13F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4EB82DF248AEB7B00CD7D41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3105B30B27B6489B001DA13F;
+			remoteInfo = RecognizeOneSignCip;
+		};
+		3105B32D27B6489E001DA13F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4EB82DF248AEB7B00CD7D41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3105B30B27B6489B001DA13F;
+			remoteInfo = RecognizeOneSignCip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3105B33A27B6489E001DA13F /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				3105B33627B6489E001DA13F /* RecognizeOneSignCip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		26547FACF06954AF783E23D9 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		3105B2FE27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Where_0_5strain.mlmodel; sourceTree = "<group>"; };
@@ -109,6 +160,23 @@
 		3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Bathroom_0_5strain.mlmodel; sourceTree = "<group>"; };
 		3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Goodbye_0_5strain.mlmodel; sourceTree = "<group>"; };
 		3105B30627B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Milk_0_5strain.mlmodel; sourceTree = "<group>"; };
+		3105B30C27B6489B001DA13F /* RecognizeOneSignCip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecognizeOneSignCip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3105B30E27B6489B001DA13F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3105B31027B6489B001DA13F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3105B31227B6489B001DA13F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3105B31527B6489B001DA13F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_xcode_created.storyboard; sourceTree = "<group>"; };
+		3105B31727B6489D001DA13F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3105B31A27B6489D001DA13F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3105B31C27B6489D001DA13F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3105B31D27B6489D001DA13F /* RecognizeOneSignCip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecognizeOneSignCip.entitlements; sourceTree = "<group>"; };
+		3105B32227B6489D001DA13F /* RecognizeOneSignCipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecognizeOneSignCipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3105B32627B6489E001DA13F /* RecognizeOneSignCipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeOneSignCipTests.swift; sourceTree = "<group>"; };
+		3105B32C27B6489E001DA13F /* RecognizeOneSignCipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecognizeOneSignCipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3105B33027B6489E001DA13F /* RecognizeOneSignCipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeOneSignCipUITests.swift; sourceTree = "<group>"; };
+		3105B33227B6489E001DA13F /* RecognizeOneSignCipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeOneSignCipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3105B34A27B64D30001DA13F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3105B34C27B64D90001DA13F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		3105B35627B68F19001DA13F /* ASL_ILoveYou.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou.mlmodel; sourceTree = "<group>"; };
 		3133B0EF27B55E9300C5432E /* ASL_Y2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Y2.mlmodel; sourceTree = "<group>"; };
 		3133B0F027B55E9300C5432E /* ASL_1TO10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_1TO10.mlmodel; sourceTree = "<group>"; };
 		3133B0F127B55E9300C5432E /* ASL_ILoveYou.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou.mlmodel; sourceTree = "<group>"; };
@@ -202,6 +270,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3105B30927B6489B001DA13F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3105B35227B66575001DA13F /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				3105B35027B66575001DA13F /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3105B31F27B6489D001DA13F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3105B32927B6489E001DA13F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4EB82E4248AEB7B00CD7D41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +305,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3105B30D27B6489B001DA13F /* RecognizeOneSignCip */ = {
+			isa = PBXGroup;
+			children = (
+				3105B35627B68F19001DA13F /* ASL_ILoveYou.mlmodel */,
+				3105B34C27B64D90001DA13F /* CameraViewController.swift */,
+				3105B34927B64D30001DA13F /* Main.storyboard */,
+				3105B30E27B6489B001DA13F /* AppDelegate.swift */,
+				3105B31027B6489B001DA13F /* SceneDelegate.swift */,
+				3105B31227B6489B001DA13F /* ViewController.swift */,
+				3105B31427B6489B001DA13F /* Main_xcode_created.storyboard */,
+				3105B31727B6489D001DA13F /* Assets.xcassets */,
+				3105B31927B6489D001DA13F /* LaunchScreen.storyboard */,
+				3105B31C27B6489D001DA13F /* Info.plist */,
+				3105B31D27B6489D001DA13F /* RecognizeOneSignCip.entitlements */,
+			);
+			path = RecognizeOneSignCip;
+			sourceTree = "<group>";
+		};
+		3105B32527B6489E001DA13F /* RecognizeOneSignCipTests */ = {
+			isa = PBXGroup;
+			children = (
+				3105B32627B6489E001DA13F /* RecognizeOneSignCipTests.swift */,
+			);
+			path = RecognizeOneSignCipTests;
+			sourceTree = "<group>";
+		};
+		3105B32F27B6489E001DA13F /* RecognizeOneSignCipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3105B33027B6489E001DA13F /* RecognizeOneSignCipUITests.swift */,
+				3105B33227B6489E001DA13F /* RecognizeOneSignCipUITestsLaunchTests.swift */,
+			);
+			path = RecognizeOneSignCipUITests;
+			sourceTree = "<group>";
+		};
+		3105B34E27B66575001DA13F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31E159312732807100984649 /* MLModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,9 +467,13 @@
 			isa = PBXGroup;
 			children = (
 				C4EB82E9248AEB7B00CD7D41 /* HandPose */,
+				3105B30D27B6489B001DA13F /* RecognizeOneSignCip */,
+				3105B32527B6489E001DA13F /* RecognizeOneSignCipTests */,
+				3105B32F27B6489E001DA13F /* RecognizeOneSignCipUITests */,
 				C4EB82E8248AEB7B00CD7D41 /* Products */,
 				3DFF40B4B70C4CD3181B64B7 /* Configuration */,
 				32A6CCA239152BDC17147684 /* LICENSE */,
+				3105B34E27B66575001DA13F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -344,6 +481,9 @@
 			isa = PBXGroup;
 			children = (
 				C4EB82E7248AEB7B00CD7D41 /* HandPose.app */,
+				3105B30C27B6489B001DA13F /* RecognizeOneSignCip.app */,
+				3105B32227B6489D001DA13F /* RecognizeOneSignCipTests.xctest */,
+				3105B32C27B6489E001DA13F /* RecognizeOneSignCipUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +515,63 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3105B30B27B6489B001DA13F /* RecognizeOneSignCip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3105B33727B6489E001DA13F /* Build configuration list for PBXNativeTarget "RecognizeOneSignCip" */;
+			buildPhases = (
+				3105B30827B6489B001DA13F /* Sources */,
+				3105B30927B6489B001DA13F /* Frameworks */,
+				3105B30A27B6489B001DA13F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecognizeOneSignCip;
+			packageProductDependencies = (
+				3105B34F27B66575001DA13F /* FirebaseAnalytics */,
+				3105B35127B66575001DA13F /* FirebaseAnalyticsSwift-Beta */,
+			);
+			productName = RecognizeOneSignCip;
+			productReference = 3105B30C27B6489B001DA13F /* RecognizeOneSignCip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		3105B32127B6489D001DA13F /* RecognizeOneSignCipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3105B33B27B6489E001DA13F /* Build configuration list for PBXNativeTarget "RecognizeOneSignCipTests" */;
+			buildPhases = (
+				3105B31E27B6489D001DA13F /* Sources */,
+				3105B31F27B6489D001DA13F /* Frameworks */,
+				3105B32027B6489D001DA13F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3105B32427B6489E001DA13F /* PBXTargetDependency */,
+			);
+			name = RecognizeOneSignCipTests;
+			productName = RecognizeOneSignCipTests;
+			productReference = 3105B32227B6489D001DA13F /* RecognizeOneSignCipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3105B32B27B6489E001DA13F /* RecognizeOneSignCipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3105B33E27B6489E001DA13F /* Build configuration list for PBXNativeTarget "RecognizeOneSignCipUITests" */;
+			buildPhases = (
+				3105B32827B6489E001DA13F /* Sources */,
+				3105B32927B6489E001DA13F /* Frameworks */,
+				3105B32A27B6489E001DA13F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3105B32E27B6489E001DA13F /* PBXTargetDependency */,
+			);
+			name = RecognizeOneSignCipUITests;
+			productName = RecognizeOneSignCipUITests;
+			productReference = 3105B32C27B6489E001DA13F /* RecognizeOneSignCipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C4EB82E6248AEB7B00CD7D41 /* HandPose */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4EB82FB248AEB7B00CD7D41 /* Build configuration list for PBXNativeTarget "HandPose" */;
@@ -382,6 +579,7 @@
 				C4EB82E3248AEB7B00CD7D41 /* Sources */,
 				C4EB82E4248AEB7B00CD7D41 /* Frameworks */,
 				C4EB82E5248AEB7B00CD7D41 /* Resources */,
+				3105B33A27B6489E001DA13F /* Embed App Clips */,
 			);
 			buildRules = (
 			);
@@ -402,10 +600,22 @@
 		C4EB82DF248AEB7B00CD7D41 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
+					3105B30B27B6489B001DA13F = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					3105B32127B6489D001DA13F = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 3105B30B27B6489B001DA13F;
+					};
+					3105B32B27B6489E001DA13F = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 3105B30B27B6489B001DA13F;
+					};
 					C4EB82E6248AEB7B00CD7D41 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -428,11 +638,40 @@
 			projectRoot = "";
 			targets = (
 				C4EB82E6248AEB7B00CD7D41 /* HandPose */,
+				3105B30B27B6489B001DA13F /* RecognizeOneSignCip */,
+				3105B32127B6489D001DA13F /* RecognizeOneSignCipTests */,
+				3105B32B27B6489E001DA13F /* RecognizeOneSignCipUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3105B30A27B6489B001DA13F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3105B31B27B6489D001DA13F /* LaunchScreen.storyboard in Resources */,
+				3105B31827B6489D001DA13F /* Assets.xcassets in Resources */,
+				3105B35527B66B12001DA13F /* GoogleService-Info.plist in Resources */,
+				3105B31627B6489B001DA13F /* Main_xcode_created.storyboard in Resources */,
+				3105B34B27B64D30001DA13F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3105B32027B6489D001DA13F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3105B32A27B6489E001DA13F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4EB82E5248AEB7B00CD7D41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,6 +686,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3105B30827B6489B001DA13F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3105B34D27B64D90001DA13F /* CameraViewController.swift in Sources */,
+				3105B31327B6489B001DA13F /* ViewController.swift in Sources */,
+				3105B34727B64935001DA13F /* MyNavigationController.swift in Sources */,
+				3105B30F27B6489B001DA13F /* AppDelegate.swift in Sources */,
+				3105B34327B648F1001DA13F /* CameraView.swift in Sources */,
+				3105B34227B648E8001DA13F /* Content.swift in Sources */,
+				3105B34527B6491E001DA13F /* HandGestureProcessor.swift in Sources */,
+				3105B31127B6489B001DA13F /* SceneDelegate.swift in Sources */,
+				3105B35727B68F19001DA13F /* ASL_ILoveYou.mlmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3105B31E27B6489D001DA13F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3105B32727B6489E001DA13F /* RecognizeOneSignCipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3105B32827B6489E001DA13F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3105B33327B6489E001DA13F /* RecognizeOneSignCipUITestsLaunchTests.swift in Sources */,
+				3105B33127B6489E001DA13F /* RecognizeOneSignCipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4EB82E3248AEB7B00CD7D41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,7 +815,44 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3105B32427B6489E001DA13F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3105B30B27B6489B001DA13F /* RecognizeOneSignCip */;
+			targetProxy = 3105B32327B6489E001DA13F /* PBXContainerItemProxy */;
+		};
+		3105B32E27B6489E001DA13F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3105B30B27B6489B001DA13F /* RecognizeOneSignCip */;
+			targetProxy = 3105B32D27B6489E001DA13F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		3105B31427B6489B001DA13F /* Main_xcode_created.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3105B31527B6489B001DA13F /* Base */,
+			);
+			name = Main_xcode_created.storyboard;
+			sourceTree = "<group>";
+		};
+		3105B31927B6489D001DA13F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3105B31A27B6489D001DA13F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3105B34927B64D30001DA13F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3105B34A27B64D30001DA13F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		C4EB82F0248AEB7B00CD7D41 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -563,6 +872,174 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3105B33827B6489E001DA13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = RecognizeOneSignCip/RecognizeOneSignCip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = B66JCRW7R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecognizeOneSignCip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SLK-I Love You";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application uses the camera to detect the signs you make with your hand.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3105B33927B6489E001DA13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = RecognizeOneSignCip/RecognizeOneSignCip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = B66JCRW7R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecognizeOneSignCip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SLK-I Love You";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application uses the camera to detect the signs you make with your hand.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3105B33C27B6489E001DA13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B66JCRW7R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six.RecognizeOneSignCipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecognizeOneSignCip.app/RecognizeOneSignCip";
+			};
+			name = Debug;
+		};
+		3105B33D27B6489E001DA13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B66JCRW7R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six.RecognizeOneSignCipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecognizeOneSignCip.app/RecognizeOneSignCip";
+			};
+			name = Release;
+		};
+		3105B33F27B6489E001DA13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B66JCRW7R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six.RecognizeOneSignCipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecognizeOneSignCip;
+			};
+			name = Debug;
+		};
+		3105B34027B6489E001DA13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B66JCRW7R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six.RecognizeOneSignCipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecognizeOneSignCip;
+			};
+			name = Release;
+		};
 		C4EB82F9248AEB7B00CD7D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72CC35B8245EF9E709BBCA67 /* SampleCode.xcconfig */;
@@ -685,11 +1162,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72CC35B8245EF9E709BBCA67 /* SampleCode.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -709,11 +1187,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72CC35B8245EF9E709BBCA67 /* SampleCode.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -732,6 +1211,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3105B33727B6489E001DA13F /* Build configuration list for PBXNativeTarget "RecognizeOneSignCip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3105B33827B6489E001DA13F /* Debug */,
+				3105B33927B6489E001DA13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3105B33B27B6489E001DA13F /* Build configuration list for PBXNativeTarget "RecognizeOneSignCipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3105B33C27B6489E001DA13F /* Debug */,
+				3105B33D27B6489E001DA13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3105B33E27B6489E001DA13F /* Build configuration list for PBXNativeTarget "RecognizeOneSignCipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3105B33F27B6489E001DA13F /* Debug */,
+				3105B34027B6489E001DA13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4EB82E2248AEB7B00CD7D41 /* Build configuration list for PBXProject "HandPose" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -764,6 +1270,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3105B34F27B66575001DA13F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314D2F1C27B5722600EF7D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3105B35127B66575001DA13F /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314D2F1C27B5722600EF7D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
 		314D2F1D27B5722600EF7D3A /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 314D2F1C27B5722600EF7D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

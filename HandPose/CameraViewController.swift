@@ -427,7 +427,7 @@ class CameraViewController: UIViewController {
     }
     
     private func analyticsLogListItemRecognized(item: String) {
-        Analytics.logEvent("se3_ios_listitem_recognized", parameters: [
+        Analytics.logEvent("se6_ios_listitem_recognized", parameters: [
             "item_name" : item
         ])
     }

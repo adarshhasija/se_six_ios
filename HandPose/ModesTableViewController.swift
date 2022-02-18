@@ -24,18 +24,18 @@ class ModesTableViewController : UITableViewController {
         //Content(text: "CUBBON PARK"),
         //
         Content(text: "Yes", isFingerspelling: false, isPose: false),
-        Content(text: "No", isFingerspelling: false, isPose: false), //working but not well
+        //Content(text: "No", isFingerspelling: false, isPose: false), //working but not well
         Content(text: "Later", isFingerspelling: false, isPose: false), //Not working
         Content(text: "Bathroom", isFingerspelling: false, isPose: false),
         Content(text: "Goodbye", isFingerspelling: false, isPose: false),
         Content(text: "Milk", isFingerspelling: false, isPose: false),
-        Content(text: "Christmas", isFingerspelling: false, isPose: false),
+        //Content(text: "Christmas", isFingerspelling: false, isPose: false), working but not well
         //Content(text: "USA", isFingerspelling: true, isPose: true),
         //Content(text: "Which", isFingerspelling: false, isPose: false), //works but needs 2 hands
         //Content(text: "Car", isFingerspelling: false, isPose: false), //Not yet done
         //Content(text: "YourWelcome", isFingerspelling: false, isPose: false), //too reactive at 1. not working at 0.5
         Content(text: "Where", isFingerspelling: false, isPose: false), //not working
-        //Content(text: "I Love You", isFingerspelling: false, isPose: true), //works but possibly awkward
+        Content(text: "I Love You", isFingerspelling: false, isPose: true), //works but possibly awkward
         //Content(text: "Come", isFingerspelling: false, isPose: false, signLangType: "Indian Sign Language"),
         //Content(text: "Go", isFingerspelling: false, isPose: false, signLangType: "Indian Sign Language"), //Not working
         //Content(text: "Walk", isFingerspelling: false, isPose: false, signLangType: "Indian Sign Language"),
