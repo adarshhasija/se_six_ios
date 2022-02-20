@@ -21,7 +21,6 @@
 		3105B32727B6489E001DA13F /* RecognizeOneSignCipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B32627B6489E001DA13F /* RecognizeOneSignCipTests.swift */; };
 		3105B33127B6489E001DA13F /* RecognizeOneSignCipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B33027B6489E001DA13F /* RecognizeOneSignCipUITests.swift */; };
 		3105B33327B6489E001DA13F /* RecognizeOneSignCipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105B33227B6489E001DA13F /* RecognizeOneSignCipUITestsLaunchTests.swift */; };
-		3105B33627B6489E001DA13F /* RecognizeOneSignCip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 3105B30C27B6489B001DA13F /* RecognizeOneSignCip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3105B34227B648E8001DA13F /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133B17127B55FE600C5432E /* Content.swift */; };
 		3105B34327B648F1001DA13F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655A248AEBD800F111B8 /* CameraView.swift */; };
 		3105B34527B6491E001DA13F /* HandGestureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655B248AEBD800F111B8 /* HandGestureProcessor.swift */; };
@@ -111,6 +110,7 @@
 		31E15928273070F200984649 /* ModesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E15927273070F200984649 /* ModesTableViewController.swift */; };
 		31E1592C27312C8D00984649 /* CustomTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1592B27312C8D00984649 /* CustomTextViewController.swift */; };
 		31E159302731B2C300984649 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1592F2731B2C300984649 /* MyNavigationController.swift */; };
+		31EFFE7F27C152E90002EE44 /* ASL_ILoveYou3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31EFFE7E27C152E80002EE44 /* ASL_ILoveYou3.mlmodel */; };
 		31F7DDDD272B0898004DCDC6 /* ASL_EMNST.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31F7DDDC272B0898004DCDC6 /* ASL_EMNST.mlmodel */; };
 		C475655D248AEBD900F111B8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655A248AEBD800F111B8 /* CameraView.swift */; };
 		C475655E248AEBD900F111B8 /* HandGestureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655B248AEBD800F111B8 /* HandGestureProcessor.swift */; };
@@ -146,7 +146,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
-				3105B33627B6489E001DA13F /* RecognizeOneSignCip.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +253,7 @@
 		31E15927273070F200984649 /* ModesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesTableViewController.swift; sourceTree = "<group>"; };
 		31E1592B27312C8D00984649 /* CustomTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextViewController.swift; sourceTree = "<group>"; };
 		31E1592F2731B2C300984649 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		31EFFE7E27C152E80002EE44 /* ASL_ILoveYou3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou3.mlmodel; sourceTree = "<group>"; };
 		31F7DDDC272B0898004DCDC6 /* ASL_EMNST.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_EMNST.mlmodel; sourceTree = "<group>"; };
 		72CC35B8245EF9E709BBCA67 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		C475655A248AEBD800F111B8 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -359,6 +359,7 @@
 		31E159322732808000984649 /* Poses */ = {
 			isa = PBXGroup;
 			children = (
+				31EFFE7E27C152E80002EE44 /* ASL_ILoveYou3.mlmodel */,
 				3133B10327B55E9400C5432E /* ASL_1TO10_2.mlmodel */,
 				3133B0FD27B55E9400C5432E /* ASL_1TO10_3.mlmodel */,
 				3133B0F027B55E9300C5432E /* ASL_1TO10.mlmodel */,
@@ -790,6 +791,7 @@
 				31E15928273070F200984649 /* ModesTableViewController.swift in Sources */,
 				C475655D248AEBD900F111B8 /* CameraView.swift in Sources */,
 				3133B17227B55FE600C5432E /* Content.swift in Sources */,
+				31EFFE7F27C152E90002EE44 /* ASL_ILoveYou3.mlmodel in Sources */,
 				3133B16227B55ECF00C5432E /* ASL_Christmas2_0_5strain.mlmodel in Sources */,
 				3133B16027B55ECF00C5432E /* ASL_Christmas2.mlmodel in Sources */,
 				3105B2FF27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel in Sources */,
@@ -1167,7 +1169,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1192,7 +1194,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

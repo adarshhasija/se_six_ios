@@ -12,6 +12,8 @@ import FirebaseAnalytics
 
 class CameraViewController: UIViewController {
 
+    var isDeviceTooOld = false
+    var isBrightnessTooLow = false
     var classifier : Any?
     let modelObservationsNeeded = 15
     var poseObservations = [VNHumanHandPoseObservation]()
@@ -31,6 +33,8 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var warningImageView: UIImageView!
     
     
+    @IBOutlet weak var middleStackViewHandDistance: UIStackView!
+    @IBOutlet weak var middleStackViewNoHands: UIStackView!
     @IBOutlet weak var middleStackView: UIStackView!
     @IBOutlet weak var middleLabel: UILabel!
     @IBOutlet weak var middleButton: UIButton!
@@ -63,8 +67,19 @@ class CameraViewController: UIViewController {
     }
     
     @objc func showWarning(_: Any) {
-        let alert = UIAlertController(title: "Warning", message: "Lighting is low. This may impact the app's ability to recognize signs.", preferredStyle: .alert)
-
+        var title = "Warning"
+        var overallMessage = ""
+        if isDeviceTooOld == true {
+            overallMessage += "You are using an older device. This may impact the app's ability to recognize signs. This app works best on iPhone 11 and above."
+        }
+        if isDeviceTooOld == true && isBrightnessTooLow == true {
+            title = "Warnings"
+            overallMessage += "\n\n" //want it only if there are 2 messages. Else there will be too much white space
+        }
+        if isBrightnessTooLow == true {
+            overallMessage += "Lighting is low. This may impact the app's ability to recognize signs."
+        }
+        let alert = UIAlertController(title: title, message: overallMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
@@ -81,6 +96,15 @@ class CameraViewController: UIViewController {
             animation.fromValue = CGPoint(x: midX - 10, y: midY)
             animation.toValue = CGPoint(x: midX + 10, y: midY)
             topButton.layer.add(animation, forKey: "position")
+        }
+    }
+    
+    func toggleWarningIconVisibility() {
+        if isDeviceTooOld == false && isBrightnessTooLow == false {
+            warningImageView.isHidden = true
+        }
+        else {
+            warningImageView.isHidden = false
         }
     }
     
@@ -157,6 +181,28 @@ class CameraViewController: UIViewController {
         topLabel.isHidden = true
         topButton.titleLabel?.text = "Show List"
         bottomImageView.isHidden = true
+        
+        let modelIdentified = modelIdentifier().components(separatedBy: ",")
+        if modelIdentified.isEmpty == false {
+            let firstHalf = modelIdentified[0]
+            if let number = Int(firstHalf.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) {
+                //iPhone 11 and above
+                //number given here is always the public model number + 1
+                //iPhone 12 = modelIdentified 13
+                if number < 12 {
+                    isDeviceTooOld = true
+                    toggleWarningIconVisibility()
+                }
+            }
+        }
+        
+    }
+    
+    func modelIdentifier() -> String {
+        if let simulatorModelIdentifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] { return simulatorModelIdentifier }
+        var sysinfo = utsname()
+        uname(&sysinfo) // ignore return value
+        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
     }
     
 
@@ -460,19 +506,21 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 cameraPermissionSuccessUI()
             }
         }
-        
+
         let brightness = getBrightness(sampleBuffer: sampleBuffer)
         if brightness > 0 {
             //high brightness, warning should not be visible
+            isBrightnessTooLow = false
             DispatchQueue.main.sync {
-                warningImageView.isHidden = true
+                toggleWarningIconVisibility()
             }
             //toggleWarningIconAnimation(fadeIn: false)
         }
         else {
             //low brightness, warning should be visible
+            isBrightnessTooLow = true
             DispatchQueue.main.sync {
-                warningImageView.isHidden = false
+                toggleWarningIconVisibility()
             }
             //toggleWarningIconAnimation(fadeIn: true)
         }
@@ -484,6 +532,12 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             // Continue only when a hand was detected in the frame.
             // Since we set the maximumHandCount property of the request to 1, there will be at most one observation.
             guard let observation = handPoseRequest.results?.first else {
+                if classifier != nil {
+                 /*   DispatchQueue.main.sync {
+                        middleStackViewNoHands.isHidden = false
+                    }   */ //Not working well for WHERE
+                }
+                
                 return
             }
             // Get points for thumb and index finger.
@@ -509,8 +563,18 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     && ringTipPoint.confidence > 0.3
                     && littleTipPoint.confidence > 0.3
             else {
+                //Not working too well. Need more time on this
+              /*  DispatchQueue.main.sync {
+                    middleStackViewHandDistance.isHidden = false
+                }   */
                 return
             }
+          /*  DispatchQueue.main.sync {
+                middleStackViewNoHands.isHidden = true
+            }   */ //Not working well for WHERE
+         /*   DispatchQueue.main.sync {
+                middleStackViewHandDistance.isHidden = true
+            }   */ //Not working too well. Need more time on this
             
             // Convert points from Vision coordinates to AVFoundation coordinates.
             thumbTip = CGPoint(x: thumbTipPoint.location.x, y: 1 - thumbTipPoint.location.y)
@@ -518,8 +582,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             middleTip = CGPoint(x: middleTipPoint.location.x, y: 1 - middleTipPoint.location.y)
             ringTip = CGPoint(x: ringTipPoint.location.x, y: 1 - ringTipPoint.location.y)
             littleTip = CGPoint(x: littleTipPoint.location.x, y: 1 - littleTipPoint.location.y)
-            
-            
+
             //Hand Pose Classifier
             guard let text = contentToGet?.text else {
                 //This is for free text mode. Used for testing purposes
@@ -655,7 +718,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 if text.uppercased() == "I LOVE YOU" {
                     print("Looking for pose: " + String("I LOVE YOU"))
                     guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                                let handPosePrediction = try (classifier as? ASL_ILoveYou)?.prediction(poses: keypointsMultiArray)
+                                let handPosePrediction = try (classifier as? ASL_ILoveYou3)?.prediction(poses: keypointsMultiArray)
                     if handPosePrediction != nil {
                         let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
                         if confidence != nil && confidence! > 0.8 {
@@ -983,7 +1046,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             classifier = try? ISL_Go3_2s_1strain(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "I LOVE YOU" {
-            classifier = try? ASL_ILoveYou(configuration: MLModelConfiguration())
+            classifier = try? ASL_ILoveYou3(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "BATHROOM" {
             classifier = try? ASL_Bathroom_0_5strain(configuration: MLModelConfiguration())
