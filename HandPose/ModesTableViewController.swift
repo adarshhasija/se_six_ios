@@ -23,6 +23,9 @@ class ModesTableViewController : UITableViewController {
         //Content(text: "ASIA"),
         //Content(text: "CUBBON PARK"),
         //
+        Content(text: "HOLI", isFingerspelling: true, isPose: false),
+        //Content(text: "NBA", isFingerspelling: true, isPose: false),
+        //Content(text: "NFL", isFingerspelling: true, isPose: false),
         Content(text: "Yes", isFingerspelling: false, isPose: false),
         //Content(text: "No", isFingerspelling: false, isPose: false), //working but not well
         Content(text: "Later", isFingerspelling: false, isPose: false), //Not working

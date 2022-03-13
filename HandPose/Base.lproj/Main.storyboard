@@ -38,14 +38,26 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Change"/>
                                     </button>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Px-ZI-lax">
-                                        <rect key="frame" x="0.0" y="73" width="75" height="73"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="7as-5e-mXa"/>
-                                            <constraint firstAttribute="height" constant="75" id="gMw-xW-PMF"/>
-                                        </constraints>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uki-QS-Fd4">
+                                        <rect key="frame" x="0.0" y="72" width="0.0" height="0.0"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ASL" translatesAutoresizingMaskIntoConstraints="NO" id="7Px-we-Eje" userLabel="ASL Image View">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="Plt-0h-0ap"/>
+                                                    <constraint firstAttribute="height" constant="75" id="eOc-R9-UP1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Px-ZI-lax">
+                                                <rect key="frame" x="0.0" y="1" width="75" height="73"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="7as-5e-mXa"/>
+                                                    <constraint firstAttribute="height" constant="75" id="gMw-xW-PMF"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OYh-6r-Sk9" secondAttribute="trailing" id="38A-50-5Rb"/>
@@ -143,6 +155,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ASLImageView" destination="7Px-we-Eje" id="CoI-SX-V66"/>
                         <outlet property="bottomImageView" destination="9k7-nx-vLv" id="7Dc-X5-1LZ"/>
                         <outlet property="bottomLabel" destination="SbA-xO-81D" id="No6-lV-wRY"/>
                         <outlet property="bottomStackViewStoryboard" destination="uD0-QZ-aRS" id="Kjn-qu-mMX"/>
@@ -300,6 +313,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ASL" width="400" height="181"/>
         <image name="ASL_A" width="260" height="341.33334350585938"/>
         <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="112"/>
         <image name="open_hand" width="170.66667175292969" height="170.66667175292969"/>

@@ -30,6 +30,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var topInstructionLabel: UILabel!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var topButton: UIButton!
+    @IBOutlet weak var ASLImageView: UIImageView!
     @IBOutlet weak var warningImageView: UIImageView!
     
     
@@ -66,6 +67,12 @@ class CameraViewController: UIViewController {
         self.present(navBarOnModal, animated: true, completion: nil)
     }
     
+    @objc func showFingerspellingMessage(_: Any) {
+        let alert = UIAlertController(title: "Fingerspelling", message: "We will be signing this word one character at a time", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     @objc func showWarning(_: Any) {
         var title = "Warning"
         var overallMessage = ""
@@ -96,6 +103,15 @@ class CameraViewController: UIViewController {
             animation.fromValue = CGPoint(x: midX - 10, y: midY)
             animation.toValue = CGPoint(x: midX + 10, y: midY)
             topButton.layer.add(animation, forKey: "position")
+        }
+    }
+    
+    func toggleASLFingerspellingIconVisibility() {
+        if contentToGet?.isFingerspelling == true {
+            ASLImageView.isHidden = false
+        }
+        else {
+            ASLImageView.isHidden = true
         }
     }
     
@@ -155,6 +171,10 @@ class CameraViewController: UIViewController {
         tvTopBig.frame = CGRect(x: 0, y: 0, width: topStackView.frame.width - 50, height: topStackView.frame.height)
         tvTopBig.isUserInteractionEnabled = false
         topStackView.addSubview(tvTopBig)   */
+        
+        let fGuestureFingerspellingImage = UITapGestureRecognizer(target: self, action: #selector(self.showFingerspellingMessage(_:)))
+        ASLImageView.isUserInteractionEnabled = true
+        ASLImageView.addGestureRecognizer(fGuestureFingerspellingImage)
         
         let fGuestureWarningImage = UITapGestureRecognizer(target: self, action: #selector(self.showWarning(_:)))
         warningImageView.isUserInteractionEnabled = true
@@ -751,6 +771,21 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     }
                 }
             }
+            else if nextChar == "H" || nextChar == "O" || nextChar == "I" {
+                print("Looking for pose: " + String(nextChar))
+                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
+                            let handPosePrediction = try (classifier as? ASL_HOLI10)?.prediction(poses: keypointsMultiArray)
+                if handPosePrediction != nil {
+                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
+                    if confidence != nil && confidence! > 0.8 {
+                        print("******** "+handPosePrediction!.label+" *****************")
+                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
+                            processPrediction(label: handPosePrediction!.label.capitalized)
+                        }
+                        return
+                    }
+                }
+            }
             else if nextChar == "M" || nextChar == "N" || nextChar == "T" {
                 print("Looking for pose: " + String(nextChar))
                 guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
@@ -886,6 +921,36 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     }
                 }
             }
+            else if nextChar == "L" {
+                print("Looking for pose: " + String(nextChar))
+                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
+                            let handPosePrediction = try (classifier as? ASL_L2)?.prediction(poses: keypointsMultiArray)
+                if handPosePrediction != nil {
+                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
+                    if confidence != nil && confidence! > 0.8 {
+                        print("******** "+handPosePrediction!.label+" *****************")
+                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
+                            processPrediction(label: handPosePrediction!.label.capitalized)
+                        }
+                        return
+                    }
+                }
+            }
+            else if nextChar == "I" {
+                print("Looking for pose: " + String(nextChar))
+                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
+                            let handPosePrediction = try (classifier as? ASL_I2)?.prediction(poses: keypointsMultiArray)
+                if handPosePrediction != nil {
+                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
+                    if confidence != nil && confidence! > 0.8 {
+                        print("******** "+handPosePrediction!.label+" *****************")
+                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
+                            processPrediction(label: handPosePrediction!.label.capitalized)
+                        }
+                        return
+                    }
+                }
+            }
             
             //
             
@@ -989,7 +1054,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
     private func setupNextCharacter(inputNextChar : Character?) {
-        guard let nextChar = inputNextChar else {
+        guard let nextChar = inputNextChar?.uppercased() else {
             //This is for free text mode. Used for testing purposes
             //classifier = try? ISL_0TO9_10(configuration: MLModelConfiguration())
             return
@@ -998,6 +1063,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         updateBottomUI(text: String(nextChar))
         if nextChar == "K" || nextChar == "R" || nextChar == "U" || nextChar == "V" {
             classifier = try? ASL_KRUV10(configuration: MLModelConfiguration())
+        }
+        else if nextChar == "H" || nextChar == "O" || nextChar == "I" {
+            classifier = try? ASL_HOLI10(configuration: MLModelConfiguration())
         }
         else if nextChar == "M" || nextChar == "N" || nextChar == "T" {
             classifier = try? ASL_MNTA2(configuration: MLModelConfiguration())
@@ -1025,6 +1093,12 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         else if nextChar == "S" {
             classifier = try? ASL_EMNST(configuration: MLModelConfiguration())
+        }
+        else if nextChar == "L" {
+            classifier = try? ASL_L2(configuration: MLModelConfiguration())
+        }
+        else if nextChar == "I" {
+            classifier = try? ASL_I2(configuration: MLModelConfiguration())
         }
         else if nextChar == "J" {
             classifier = try? ASL_J2s_1strain(configuration: MLModelConfiguration())
@@ -1107,6 +1181,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
         if content.isFingerspelling == false {
+            ASLImageView.isHidden = true
             setupNextWord(word: content.text)
             topLabel.attributedText = getMutableStringBig(text: content.text)
             topLabel.isHidden = false
@@ -1114,6 +1189,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
         topLabel.isHidden = false
+        ASLImageView.isHidden = false
         let index = content.text.index(content.text.startIndex, offsetBy: currentIndex)
         let nextChar = content.text[index]
         setupNextCharacter(inputNextChar: nextChar)
