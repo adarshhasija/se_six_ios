@@ -28,10 +28,12 @@ class ModesTableViewController : UITableViewController {
         //Content(text: "NFL", isFingerspelling: true, isPose: false),
         Content(text: "Yes", isFingerspelling: false, isPose: false),
         //Content(text: "No", isFingerspelling: false, isPose: false), //working but not well
+        Content(text: "Ambulance", isFingerspelling: false, isPose: false),
         Content(text: "Later", isFingerspelling: false, isPose: false), //Not working
         Content(text: "Bathroom", isFingerspelling: false, isPose: false),
         Content(text: "Goodbye", isFingerspelling: false, isPose: false),
         Content(text: "Milk", isFingerspelling: false, isPose: false),
+        Content(text: "CODA", isFingerspelling: true, isPose: false),
         //Content(text: "Christmas", isFingerspelling: false, isPose: false), working but not well
         //Content(text: "USA", isFingerspelling: true, isPose: true),
         //Content(text: "Which", isFingerspelling: false, isPose: false), //works but needs 2 hands

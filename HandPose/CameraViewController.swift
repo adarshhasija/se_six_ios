@@ -15,7 +15,7 @@ class CameraViewController: UIViewController {
     var isDeviceTooOld = false
     var isBrightnessTooLow = false
     var classifier : Any?
-    let modelObservationsNeeded = 15
+    var modelObservationsNeeded = 30
     var poseObservations = [VNHumanHandPoseObservation]()
     var frameCounter = 0
     var contentToGet : Content? = nil
@@ -676,6 +676,13 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                         processPrediction(label: predictions.label.capitalized)
                     }
                 }
+                else if text.uppercased() == "AMBULANCE" {
+                    guard let predictions = try? (classifier as? ASL_Ambulance_1strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print(predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        processPrediction(label: predictions.label.capitalized)
+                    }
+                }
                 else if text.uppercased() == "LATER" {
                     guard let predictions = try? (classifier as? ASL_Later_0_5strain)?.prediction(poses: posesMultiArray!) else { return }
                     print(predictions.label.capitalized)
@@ -1131,6 +1138,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         else if wordUppercased == "NO" {
             classifier = try? ASL_No_0_5strain(configuration: MLModelConfiguration())
         }
+        else if wordUppercased == "AMBULANCE" {
+            classifier = try? ASL_Ambulance_1strain(configuration: MLModelConfiguration())
+        }
         else if wordUppercased == "LATER" {
             classifier = try? ASL_Later_0_5strain(configuration: MLModelConfiguration())
         }
@@ -1246,6 +1256,12 @@ extension CameraViewController :  CameraViewControllerProtocol {
     
     func newContentReceived(content : Content) {
         contentToGet = content
+        if contentToGet?.text.uppercased() == "AMBULANCE" {
+            modelObservationsNeeded = 30
+        }
+        else {
+            modelObservationsNeeded = 15
+        }
         Analytics.logEvent("se6_ios_listitem_selected", parameters: [
             "item_name" : content.text
         ])
