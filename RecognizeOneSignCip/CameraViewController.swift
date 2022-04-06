@@ -131,8 +131,8 @@ class CameraViewController: UIViewController {
         warningImageView.isUserInteractionEnabled = true
         warningImageView.addGestureRecognizer(fGuestureWarningImage)
         
-        topButton.addTarget(self, action: #selector(self.openModes(_:)), for: .touchUpInside)
-        let fGuesture = UITapGestureRecognizer(target: self, action: #selector(self.openModes(_:)))
+        topButton.addTarget(self, action: #selector(self.openContentTable(_:)), for: .touchUpInside)
+        let fGuesture = UITapGestureRecognizer(target: self, action: #selector(self.openContentTable(_:)))
         topStackViewStoryboard.addGestureRecognizer(fGuesture)
         topStackViewStoryboard.isUserInteractionEnabled = true
         topStackViewStoryboard.isMultipleTouchEnabled = true
@@ -169,7 +169,7 @@ class CameraViewController: UIViewController {
                 cameraView.isUserInteractionEnabled = true
                 cameraView.isMultipleTouchEnabled = true
                 
-                let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.openModes(_:)))
+                let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.openContentTable(_:)))
                     swipeUp.direction = .up
                     cameraView.addGestureRecognizer(swipeUp)
             }

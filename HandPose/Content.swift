@@ -11,14 +11,39 @@ import Foundation
 class Content {
     
     var text : String
-    var isFingerspelling : Bool //If yes, the user is meant to go letter by letter
-    var isPose : Bool? //False if its a moving action
-    var signLangType : String? //ASL or ISL or other. If nil, it means its ASL
+    var isFingerspelling : Bool = false //If yes, the user is meant to go letter by letter
+    var isPose : Bool =  false
+    var maximumHandCount: Int = 1
+    var modelObservationsNeeded : Int = 15 //0.5s. Maybe more for longer actions
+    var signLangType : String = "ASL" 
     
     init(text : String) {
         self.text = text
-        self.isFingerspelling = true
-        self.isPose = nil
+    }
+    
+    init(text : String, isFingerspelling : Bool) {
+        self.text = text
+        self.isFingerspelling = isFingerspelling
+    }
+    
+    //fingerspelling false
+    //Most words have actions as signs
+    //But in some cases, the word has a pose as a sign
+    //eg: I Love You
+    init(text : String, isPose : Bool) {
+        self.text = text
+        self.isPose = isPose
+    }
+    
+    init(text : String, modelObservationsNeeded : Int) {
+        self.text = text
+        self.modelObservationsNeeded = modelObservationsNeeded
+    }
+    
+    init(text : String, modelObservationsNeeded : Int, maximumHandCount : Int) {
+        self.text = text
+        self.modelObservationsNeeded = modelObservationsNeeded
+        self.maximumHandCount = maximumHandCount
     }
     
     init(text : String, isFingerspelling : Bool, isPose : Bool) {
@@ -27,10 +52,8 @@ class Content {
         self.isPose = isPose
     }
     
-    init(text : String, isFingerspelling : Bool, isPose : Bool, signLangType: String) {
+    init(text : String, signLangType: String) {
         self.text = text
-        self.isFingerspelling = isFingerspelling
-        self.isPose = isPose
         self.signLangType = signLangType
     }
 }

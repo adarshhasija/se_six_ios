@@ -15,8 +15,9 @@ class CameraViewController: UIViewController {
     var isDeviceTooOld = false
     var isBrightnessTooLow = false
     var classifier : Any?
-    var modelObservationsNeeded = 30
+    var modelObservationsNeeded = 15
     var poseObservations = [VNHumanHandPoseObservation]()
+    var poseObservations2 = [VNHumanHandPoseObservation]() //For a second hand (if applicable)
     var frameCounter = 0
     var contentToGet : Content? = nil
     var currentIndex = 0
@@ -58,9 +59,9 @@ class CameraViewController: UIViewController {
     
     private var gestureProcessor = HandGestureProcessor()
     
-    @objc func openModes(_: Any?) {
+    @objc func openContentTable(_: Any?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondViewController = storyboard.instantiateViewController(withIdentifier: "ModesTable") as! ModesTableViewController
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "ContentTable") as! ContentTableViewController
         let navBarOnModal: MyNavigationController = MyNavigationController(rootViewController: secondViewController)
         navBarOnModal.delegateCamera = self
         secondViewController.delegateCameraView = self
@@ -139,7 +140,7 @@ class CameraViewController: UIViewController {
         drawOverlay.lineCap = .round
         view.layer.addSublayer(drawOverlay)
         // This sample app detects one hand only.
-        handPoseRequest.maximumHandCount = 1
+        handPoseRequest.maximumHandCount = 2
         // Add state change handler to hand gesture processor.
     /*    gestureProcessor.didChangeStateClosure = { [weak self] state in
             self?.handleGestureStateChange(state: state)
@@ -180,8 +181,8 @@ class CameraViewController: UIViewController {
         warningImageView.isUserInteractionEnabled = true
         warningImageView.addGestureRecognizer(fGuestureWarningImage)
         
-        topButton.addTarget(self, action: #selector(self.openModes(_:)), for: .touchUpInside)
-        let fGuesture = UITapGestureRecognizer(target: self, action: #selector(self.openModes(_:)))
+        topButton.addTarget(self, action: #selector(self.openContentTable(_:)), for: .touchUpInside)
+        let fGuesture = UITapGestureRecognizer(target: self, action: #selector(self.openContentTable(_:)))
         topStackViewStoryboard.addGestureRecognizer(fGuesture)
         topStackViewStoryboard.isUserInteractionEnabled = true
         topStackViewStoryboard.isMultipleTouchEnabled = true
@@ -239,7 +240,7 @@ class CameraViewController: UIViewController {
                 cameraView.isUserInteractionEnabled = true
                 cameraView.isMultipleTouchEnabled = true
                 
-                let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.openModes(_:)))
+                let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.openContentTable(_:)))
                     swipeUp.direction = .up
                     cameraView.addGestureRecognizer(swipeUp)
             }
@@ -560,6 +561,8 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 
                 return
             }
+            //By now we know results is not null
+            let observation2 = handPoseRequest.results!.count > 1 ? handPoseRequest.results?.last : nil
             // Get points for thumb and index finger.
             let thumbPoints = try observation.recognizedPoints(.thumb)
             let indexFingerPoints = try observation.recognizedPoints(.indexFinger)
@@ -634,6 +637,15 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 }
                 poseObservations.append(observation)
                 let posesMultiArray = prepareInputWithObservations(poseObservations)
+                var posesMultiArray2 : MLMultiArray?
+                if observation2 != nil {
+                    if poseObservations2.count >= modelObservationsNeeded {
+                        poseObservations2.removeFirst()
+                    }
+                    poseObservations2.append(observation2!)
+                    posesMultiArray2 = prepareInputWithObservations(poseObservations2)
+                }
+                
                 if text.uppercased() == "ONAM" {
                     guard let predictions = try? (classifier as? ISL_Onam_2s_1strain)?.prediction(poses: posesMultiArray!) else { return }
                     print(predictions.label.capitalized)
@@ -681,6 +693,20 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     print(predictions.label.capitalized)
                     if predictions.label.uppercased() == text.uppercased() {
                         processPrediction(label: predictions.label.capitalized)
+                    }
+                }
+                else if text.uppercased() == "EASTER" {
+                    guard let predictions = try? (classifier as? ASL_Easter_1strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print("HAND 1: " + predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        if posesMultiArray2 != nil {
+                            guard let predictions2 = try? (classifier as? ASL_Easter_1strain)?.prediction(poses: posesMultiArray2!) else { return }
+                            print("HAND 2: " + predictions2.label.capitalized)
+                            if predictions2.label.uppercased() == text.uppercased() {
+                                processPrediction(label: predictions2.label.capitalized)
+                            }
+                        }
+                        
                     }
                 }
                 else if text.uppercased() == "LATER" {
@@ -1038,6 +1064,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             animateSignResult(letter: nil)
             frameCounter = 0
             poseObservations = []
+            poseObservations2 = []
             currentIndex = currentIndex + 1
             if contentToGet?.isFingerspelling == true {
                 var nextChar : String = ""
@@ -1141,6 +1168,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         else if wordUppercased == "AMBULANCE" {
             classifier = try? ASL_Ambulance_1strain(configuration: MLModelConfiguration())
         }
+        else if wordUppercased == "EASTER" {
+            classifier = try? ASL_Easter_1strain(configuration: MLModelConfiguration())
+        }
         else if wordUppercased == "LATER" {
             classifier = try? ASL_Later_0_5strain(configuration: MLModelConfiguration())
         }
@@ -1185,6 +1215,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     private func resetSetup() {
         frameCounter = 0
         poseObservations = [] //clear pose observations
+        poseObservations2 = []
         currentIndex = 0
         guard let content = contentToGet else {
             setupNextCharacter(inputNextChar: nil)
@@ -1212,7 +1243,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             if newImage != nil { startFade(newText: txt, newImage: newImage!) }
         }
         else {
-            let prefix = contentToGet?.signLangType?.uppercased() == "INDIAN SIGN LANGUAGE" ? "ISL" : "ASL"
+            let prefix = contentToGet?.signLangType.uppercased() ?? "ASL"
             let fileName = prefix + "_" + text!
             let newImage : UIImage? = UIImage(named: fileName)
             if newImage != nil { startFade(newText: text!, newImage: newImage!) }
@@ -1256,12 +1287,8 @@ extension CameraViewController :  CameraViewControllerProtocol {
     
     func newContentReceived(content : Content) {
         contentToGet = content
-        if contentToGet?.text.uppercased() == "AMBULANCE" {
-            modelObservationsNeeded = 30
-        }
-        else {
-            modelObservationsNeeded = 15
-        }
+        modelObservationsNeeded = contentToGet?.modelObservationsNeeded ?? modelObservationsNeeded
+        handPoseRequest.maximumHandCount = contentToGet?.maximumHandCount ?? handPoseRequest.maximumHandCount
         Analytics.logEvent("se6_ios_listitem_selected", parameters: [
             "item_name" : content.text
         ])
