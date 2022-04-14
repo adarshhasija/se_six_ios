@@ -33,6 +33,8 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var ASLImageView: UIImageView!
     @IBOutlet weak var warningImageView: UIImageView!
+    @IBOutlet weak var stackViewHandsNumber: UIStackView!
+    @IBOutlet weak var labelHandsNumber: UILabel!
     
     
     @IBOutlet weak var middleStackViewHandDistance: UIStackView!
@@ -87,6 +89,17 @@ class CameraViewController: UIViewController {
         if isBrightnessTooLow == true {
             overallMessage += "Lighting is low. This may impact the app's ability to recognize signs."
         }
+        let alert = UIAlertController(title: title, message: overallMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    @objc func showNumberOfHandsMessage(_: Any) {
+        guard let content = contentToGet else {
+            return
+        }
+        let title = "Note"
+        let overallMessage = "This requires you to use " + String(content.maximumHandCount) + " hands. It is advisable to place your device on a surface horizontally and try the sign."
         let alert = UIAlertController(title: title, message: overallMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
@@ -180,6 +193,9 @@ class CameraViewController: UIViewController {
         let fGuestureWarningImage = UITapGestureRecognizer(target: self, action: #selector(self.showWarning(_:)))
         warningImageView.isUserInteractionEnabled = true
         warningImageView.addGestureRecognizer(fGuestureWarningImage)
+        let fGuestureNumberOfHands = UITapGestureRecognizer(target: self, action: #selector(self.showNumberOfHandsMessage(_:)))
+        stackViewHandsNumber.isUserInteractionEnabled = true
+        stackViewHandsNumber.addGestureRecognizer(fGuestureNumberOfHands)
         
         topButton.addTarget(self, action: #selector(self.openContentTable(_:)), for: .touchUpInside)
         let fGuesture = UITapGestureRecognizer(target: self, action: #selector(self.openContentTable(_:)))
@@ -1223,6 +1239,13 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         if content.isFingerspelling == false {
             ASLImageView.isHidden = true
+            if content.maximumHandCount > 1 {
+                labelHandsNumber.text = String(content.maximumHandCount)
+                stackViewHandsNumber.isHidden = false
+            }
+            else {
+                stackViewHandsNumber.isHidden = true
+            }
             setupNextWord(word: content.text)
             topLabel.attributedText = getMutableStringBig(text: content.text)
             topLabel.isHidden = false
@@ -1231,6 +1254,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         topLabel.isHidden = false
         ASLImageView.isHidden = false
+        stackViewHandsNumber.isHidden = true
         let index = content.text.index(content.text.startIndex, offsetBy: currentIndex)
         let nextChar = content.text[index]
         setupNextCharacter(inputNextChar: nextChar)
