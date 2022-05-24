@@ -11,7 +11,7 @@ import UIKit
 
 class ContentTableViewController : UITableViewController {
     
-    let contentList = [
+    var contentList = [
         //Spelling content
         //Content(text: "Enter name"),
         //Content(text: "SIGN KARO"),
@@ -19,18 +19,28 @@ class ContentTableViewController : UITableViewController {
         //Content(text: "ASIA"),
         //Content(text: "CUBBON PARK"),
         //
-        Content(text: "HOLI", isFingerspelling: true),
         //Content(text: "NBA", isFingerspelling: true),
         //Content(text: "NFL", isFingerspelling: true),
         Content(text: "Yes"),
+        //Content(text: "Monday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
+        //Content(text: "Tuesday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
+        //Content(text: "Wednesday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
+        //Content(text: "Thursday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
+        //Content(text: "Friday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
+        //Content(text: "Saturday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
+        //Content(text: "Sunday", modelObservationsNeeded: 30, maximumHandCount: 2, links: ["Days_Of_Week"]),
         //Content(text: "No"), //working but not well
         Content(text: "Ambulance", modelObservationsNeeded: 30),
+        Content(text: "Fire", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Easter", modelObservationsNeeded: 30, maximumHandCount: 2),
+        Content(text: "Celebrate", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Later"),
         Content(text: "Bathroom"),
         Content(text: "Goodbye"),
         Content(text: "Milk"),
         Content(text: "CODA", isFingerspelling: true),
+        Content(text: "HOLI", isFingerspelling: true),
+        Content(text: "EID", isFingerspelling: true),
         //Content(text: "Christmas"), working but not well
         //Content(text: "USA", isFingerspelling: true),
         //Content(text: "Which"), //works but needs 2 hands
@@ -45,6 +55,7 @@ class ContentTableViewController : UITableViewController {
     ]
     
     var delegateCameraView : CameraViewControllerProtocol? = nil
+    var currentSelectedContent : Content?
     
     @objc func close(){
         self.dismiss(animated: true, completion: nil)
@@ -53,6 +64,23 @@ class ContentTableViewController : UITableViewController {
     override func viewDidLoad() {
         let closeBarButtonItem = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(close))
         self.navigationItem.rightBarButtonItem  = closeBarButtonItem
+        
+        let link1 = currentSelectedContent?.links.first
+        var itemsWithLink : [Content] = []
+        var itemsWithoutLink : [Content] = []
+        if link1 != nil {
+            for content in contentList {
+                if content.links.contains("Days_Of_Week") {
+                    itemsWithLink.append(content)
+                }
+                else {
+                    itemsWithoutLink.append(content)
+                }
+            }
+            contentList.removeAll()
+            contentList.append(contentsOf: itemsWithLink)
+            contentList.append(contentsOf: itemsWithoutLink)
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

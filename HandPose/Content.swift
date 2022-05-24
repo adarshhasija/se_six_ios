@@ -15,7 +15,8 @@ class Content {
     var isPose : Bool =  false
     var maximumHandCount: Int = 1
     var modelObservationsNeeded : Int = 15 //0.5s. Maybe more for longer actions
-    var signLangType : String = "ASL" 
+    var signLangType : String = "ASL"
+    var links : [String] = []
     
     init(text : String) {
         self.text = text
@@ -40,10 +41,23 @@ class Content {
         self.modelObservationsNeeded = modelObservationsNeeded
     }
     
+    init(text : String, modelObservationsNeeded : Int, links : [String]) {
+        self.text = text
+        self.modelObservationsNeeded = modelObservationsNeeded
+        self.links.append(contentsOf: links)
+    }
+    
     init(text : String, modelObservationsNeeded : Int, maximumHandCount : Int) {
         self.text = text
         self.modelObservationsNeeded = modelObservationsNeeded
         self.maximumHandCount = maximumHandCount
+    }
+    
+    init(text : String, modelObservationsNeeded : Int, maximumHandCount : Int, links : [String]) {
+        self.text = text
+        self.modelObservationsNeeded = modelObservationsNeeded
+        self.maximumHandCount = maximumHandCount
+        self.links.append(contentsOf: links)
     }
     
     init(text : String, isFingerspelling : Bool, isPose : Bool) {

@@ -31,30 +31,14 @@
 		3105B35527B66B12001DA13F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314D2F1A27B56FCD00EF7D3A /* GoogleService-Info.plist */; };
 		3105B35727B68F19001DA13F /* ASL_ILoveYou.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B35627B68F19001DA13F /* ASL_ILoveYou.mlmodel */; };
 		3133B11B27B55E9500C5432E /* ASL_AIY7.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F227B55E9300C5432E /* ASL_AIY7.mlmodel */; };
-		3133B11C27B55E9500C5432E /* ASL_BFW.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F327B55E9300C5432E /* ASL_BFW.mlmodel */; };
 		3133B11F27B55E9500C5432E /* ASL_I2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F627B55E9300C5432E /* ASL_I2.mlmodel */; };
 		3133B12527B55E9500C5432E /* ASL_D.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0FC27B55E9300C5432E /* ASL_D.mlmodel */; };
-		3133B12627B55E9500C5432E /* ASL_1TO10_3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0FD27B55E9400C5432E /* ASL_1TO10_3.mlmodel */; };
-		3133B12927B55E9500C5432E /* ASL_GH23.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B10027B55E9400C5432E /* ASL_GH23.mlmodel */; };
-		3133B12C27B55E9500C5432E /* ASL_1TO10_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B10327B55E9400C5432E /* ASL_1TO10_2.mlmodel */; };
-		3133B12D27B55E9500C5432E /* ASL_MinusJZ_4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B10427B55E9400C5432E /* ASL_MinusJZ_4.mlmodel */; };
-		3133B13027B55E9500C5432E /* ASL_MNTA2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B10727B55E9400C5432E /* ASL_MNTA2.mlmodel */; };
-		3133B13227B55E9500C5432E /* ISL_0TO9_3_i160.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B10927B55E9400C5432E /* ISL_0TO9_3_i160.mlmodel */; };
-		3133B13827B55E9500C5432E /* ISL_0TO9_9.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B10F27B55E9500C5432E /* ISL_0TO9_9.mlmodel */; };
-		3133B13927B55E9500C5432E /* ASL_E3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B11027B55E9500C5432E /* ASL_E3.mlmodel */; };
-		3133B13A27B55E9500C5432E /* ASL_B.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B11127B55E9500C5432E /* ASL_B.mlmodel */; };
-		3133B13B27B55E9500C5432E /* ISL_0TO9_10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B11227B55E9500C5432E /* ISL_0TO9_10.mlmodel */; };
-		3133B13C27B55E9500C5432E /* ASL_MinusJZ_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B11327B55E9500C5432E /* ASL_MinusJZ_2.mlmodel */; };
-		3133B13D27B55E9500C5432E /* ASL_KRUV10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B11427B55E9500C5432E /* ASL_KRUV10.mlmodel */; };
-		3133B15927B55ECF00C5432E /* ISL_Onam_2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B14127B55ECE00C5432E /* ISL_Onam_2s_1strain.mlmodel */; };
 		3133B16227B55ECF00C5432E /* ASL_Christmas2_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B14A27B55ECE00C5432E /* ASL_Christmas2_0_5strain.mlmodel */; };
 		3133B16527B55ECF00C5432E /* ASL_Which.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B14D27B55ECE00C5432E /* ASL_Which.mlmodel */; };
-		3133B16627B55ECF00C5432E /* ISL_ComeGo2_2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B14E27B55ECE00C5432E /* ISL_ComeGo2_2s_1strain.mlmodel */; };
-		3133B16827B55ECF00C5432E /* ISL_Go3_2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B15027B55ECE00C5432E /* ISL_Go3_2s_1strain.mlmodel */; };
 		3133B16A27B55ECF00C5432E /* ASL_YourWelcome2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B15227B55ECE00C5432E /* ASL_YourWelcome2.mlmodel */; };
-		3133B16E27B55ECF00C5432E /* ISL_Walk_2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B15627B55ECF00C5432E /* ISL_Walk_2s_1strain.mlmodel */; };
 		3133B17227B55FE600C5432E /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133B17127B55FE600C5432E /* Content.swift */; };
 		3133B17427B560D200C5432E /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133B17327B560D100C5432E /* MyTableViewCell.swift */; };
+		31367544283BEB14002806A1 /* ASL_Celebrate.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31367543283BEB14002806A1 /* ASL_Celebrate.mlmodel */; };
 		314D2F1B27B56FCD00EF7D3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314D2F1A27B56FCD00EF7D3A /* GoogleService-Info.plist */; };
 		314D2F1E27B5722600EF7D3A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 314D2F1D27B5722600EF7D3A /* FirebaseAnalytics */; };
 		314D2F2027B5722600EF7D3A /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 314D2F1F27B5722600EF7D3A /* FirebaseAnalyticsSwift-Beta */; };
@@ -64,16 +48,17 @@
 		315E792C27D1C54000BCDBCF /* ASL_L2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 315E792B27D1C54000BCDBCF /* ASL_L2.mlmodel */; };
 		315E793427D5246900BCDBCF /* ASL_HOLI10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 315E793327D5246900BCDBCF /* ASL_HOLI10.mlmodel */; };
 		315E793C27DDDFF500BCDBCF /* ASL_YourWelcome2_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 315E793B27DDDFF500BCDBCF /* ASL_YourWelcome2_0_5strain.mlmodel */; };
+		319D4EE4281053A8005DEF29 /* ASL_Fire_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319D4EE3281053A8005DEF29 /* ASL_Fire_1strain.mlmodel */; };
+		319D4EE828110769005DEF29 /* ASL_E10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319D4EE728110769005DEF29 /* ASL_E10.mlmodel */; };
 		319F769127B5624D0072850D /* ASL_Yes_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */; };
 		319F769227B5624D0072850D /* ASL_No_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */; };
+		31CFCBA828316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31CFCBA728316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel */; };
 		31E15918272E27E000984649 /* ASL_Z2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */; };
 		31E15920272EBA8500984649 /* ASL_J2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31E1591F272EBA8500984649 /* ASL_J2s_1strain.mlmodel */; };
 		31E159262730283000984649 /* ASL_CO2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31E159252730282F00984649 /* ASL_CO2.mlmodel */; };
 		31E15928273070F200984649 /* ContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E15927273070F200984649 /* ContentTableViewController.swift */; };
 		31E1592C27312C8D00984649 /* CustomTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1592B27312C8D00984649 /* CustomTextViewController.swift */; };
 		31E159302731B2C300984649 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1592F2731B2C300984649 /* MyNavigationController.swift */; };
-		31EFFE7F27C152E90002EE44 /* ASL_ILoveYou3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31EFFE7E27C152E80002EE44 /* ASL_ILoveYou3.mlmodel */; };
-		31F7DDDD272B0898004DCDC6 /* ASL_EMNST.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31F7DDDC272B0898004DCDC6 /* ASL_EMNST.mlmodel */; };
 		C475655D248AEBD900F111B8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655A248AEBD800F111B8 /* CameraView.swift */; };
 		C475655E248AEBD900F111B8 /* HandGestureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655B248AEBD800F111B8 /* HandGestureProcessor.swift */; };
 		C475655F248AEBD900F111B8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655C248AEBD900F111B8 /* CameraViewController.swift */; };
@@ -138,30 +123,14 @@
 		3105B34C27B64D90001DA13F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3105B35627B68F19001DA13F /* ASL_ILoveYou.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou.mlmodel; sourceTree = "<group>"; };
 		3133B0F227B55E9300C5432E /* ASL_AIY7.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_AIY7.mlmodel; sourceTree = "<group>"; };
-		3133B0F327B55E9300C5432E /* ASL_BFW.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_BFW.mlmodel; sourceTree = "<group>"; };
 		3133B0F627B55E9300C5432E /* ASL_I2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_I2.mlmodel; sourceTree = "<group>"; };
 		3133B0FC27B55E9300C5432E /* ASL_D.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_D.mlmodel; sourceTree = "<group>"; };
-		3133B0FD27B55E9400C5432E /* ASL_1TO10_3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_1TO10_3.mlmodel; sourceTree = "<group>"; };
-		3133B10027B55E9400C5432E /* ASL_GH23.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_GH23.mlmodel; sourceTree = "<group>"; };
-		3133B10327B55E9400C5432E /* ASL_1TO10_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_1TO10_2.mlmodel; sourceTree = "<group>"; };
-		3133B10427B55E9400C5432E /* ASL_MinusJZ_4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_MinusJZ_4.mlmodel; sourceTree = "<group>"; };
-		3133B10727B55E9400C5432E /* ASL_MNTA2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_MNTA2.mlmodel; sourceTree = "<group>"; };
-		3133B10927B55E9400C5432E /* ISL_0TO9_3_i160.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_0TO9_3_i160.mlmodel; sourceTree = "<group>"; };
-		3133B10F27B55E9500C5432E /* ISL_0TO9_9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_0TO9_9.mlmodel; sourceTree = "<group>"; };
-		3133B11027B55E9500C5432E /* ASL_E3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_E3.mlmodel; sourceTree = "<group>"; };
-		3133B11127B55E9500C5432E /* ASL_B.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_B.mlmodel; sourceTree = "<group>"; };
-		3133B11227B55E9500C5432E /* ISL_0TO9_10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_0TO9_10.mlmodel; sourceTree = "<group>"; };
-		3133B11327B55E9500C5432E /* ASL_MinusJZ_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_MinusJZ_2.mlmodel; sourceTree = "<group>"; };
-		3133B11427B55E9500C5432E /* ASL_KRUV10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_KRUV10.mlmodel; sourceTree = "<group>"; };
-		3133B14127B55ECE00C5432E /* ISL_Onam_2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_Onam_2s_1strain.mlmodel; sourceTree = "<group>"; };
 		3133B14A27B55ECE00C5432E /* ASL_Christmas2_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Christmas2_0_5strain.mlmodel; sourceTree = "<group>"; };
 		3133B14D27B55ECE00C5432E /* ASL_Which.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Which.mlmodel; sourceTree = "<group>"; };
-		3133B14E27B55ECE00C5432E /* ISL_ComeGo2_2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_ComeGo2_2s_1strain.mlmodel; sourceTree = "<group>"; };
-		3133B15027B55ECE00C5432E /* ISL_Go3_2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_Go3_2s_1strain.mlmodel; sourceTree = "<group>"; };
 		3133B15227B55ECE00C5432E /* ASL_YourWelcome2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_YourWelcome2.mlmodel; sourceTree = "<group>"; };
-		3133B15627B55ECF00C5432E /* ISL_Walk_2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_Walk_2s_1strain.mlmodel; sourceTree = "<group>"; };
 		3133B17127B55FE600C5432E /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		3133B17327B560D100C5432E /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		31367543283BEB14002806A1 /* ASL_Celebrate.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Celebrate.mlmodel; sourceTree = "<group>"; };
 		314D2F1A27B56FCD00EF7D3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		314D2F2127B58B3A00EF7D3A /* ASL_Later_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Later_0_5strain.mlmodel; sourceTree = "<group>"; };
 		315CFC4527FA93BD002A1733 /* ASL_Ambulance_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Ambulance_1strain.mlmodel; sourceTree = "<group>"; };
@@ -169,16 +138,17 @@
 		315E792B27D1C54000BCDBCF /* ASL_L2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_L2.mlmodel; sourceTree = "<group>"; };
 		315E793327D5246900BCDBCF /* ASL_HOLI10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_HOLI10.mlmodel; sourceTree = "<group>"; };
 		315E793B27DDDFF500BCDBCF /* ASL_YourWelcome2_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_YourWelcome2_0_5strain.mlmodel; sourceTree = "<group>"; };
+		319D4EE3281053A8005DEF29 /* ASL_Fire_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Fire_1strain.mlmodel; sourceTree = "<group>"; };
+		319D4EE728110769005DEF29 /* ASL_E10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_E10.mlmodel; sourceTree = "<group>"; };
 		319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Yes_0_5strain.mlmodel; sourceTree = "<group>"; };
 		319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_No_0_5strain.mlmodel; sourceTree = "<group>"; };
+		31CFCBA728316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou3.mlmodel; sourceTree = "<group>"; };
 		31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Z2s_1strain.mlmodel; sourceTree = "<group>"; };
 		31E1591F272EBA8500984649 /* ASL_J2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_J2s_1strain.mlmodel; sourceTree = "<group>"; };
 		31E159252730282F00984649 /* ASL_CO2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_CO2.mlmodel; sourceTree = "<group>"; };
 		31E15927273070F200984649 /* ContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewController.swift; sourceTree = "<group>"; };
 		31E1592B27312C8D00984649 /* CustomTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextViewController.swift; sourceTree = "<group>"; };
 		31E1592F2731B2C300984649 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
-		31EFFE7E27C152E80002EE44 /* ASL_ILoveYou3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou3.mlmodel; sourceTree = "<group>"; };
-		31F7DDDC272B0898004DCDC6 /* ASL_EMNST.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_EMNST.mlmodel; sourceTree = "<group>"; };
 		72CC35B8245EF9E709BBCA67 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		C475655A248AEBD800F111B8 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		C475655B248AEBD800F111B8 /* HandGestureProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandGestureProcessor.swift; sourceTree = "<group>"; };
@@ -283,27 +253,14 @@
 		31E159322732808000984649 /* Poses */ = {
 			isa = PBXGroup;
 			children = (
-				31EFFE7E27C152E80002EE44 /* ASL_ILoveYou3.mlmodel */,
-				3133B11427B55E9500C5432E /* ASL_KRUV10.mlmodel */,
-				315E793327D5246900BCDBCF /* ASL_HOLI10.mlmodel */,
-				3133B10727B55E9400C5432E /* ASL_MNTA2.mlmodel */,
-				3133B10027B55E9400C5432E /* ASL_GH23.mlmodel */,
-				3133B0F227B55E9300C5432E /* ASL_AIY7.mlmodel */,
-				3133B11127B55E9500C5432E /* ASL_B.mlmodel */,
+				31CFCBA728316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel */,
 				31E159252730282F00984649 /* ASL_CO2.mlmodel */,
+				315E793327D5246900BCDBCF /* ASL_HOLI10.mlmodel */,
 				3133B0FC27B55E9300C5432E /* ASL_D.mlmodel */,
-				3133B11027B55E9500C5432E /* ASL_E3.mlmodel */,
-				3133B0F327B55E9300C5432E /* ASL_BFW.mlmodel */,
-				31F7DDDC272B0898004DCDC6 /* ASL_EMNST.mlmodel */,
+				3133B0F227B55E9300C5432E /* ASL_AIY7.mlmodel */,
 				315E792B27D1C54000BCDBCF /* ASL_L2.mlmodel */,
+				319D4EE728110769005DEF29 /* ASL_E10.mlmodel */,
 				3133B0F627B55E9300C5432E /* ASL_I2.mlmodel */,
-				3133B10927B55E9400C5432E /* ISL_0TO9_3_i160.mlmodel */,
-				3133B10F27B55E9500C5432E /* ISL_0TO9_9.mlmodel */,
-				3133B11227B55E9500C5432E /* ISL_0TO9_10.mlmodel */,
-				3133B11327B55E9500C5432E /* ASL_MinusJZ_2.mlmodel */,
-				3133B10427B55E9400C5432E /* ASL_MinusJZ_4.mlmodel */,
-				3133B10327B55E9400C5432E /* ASL_1TO10_2.mlmodel */,
-				3133B0FD27B55E9400C5432E /* ASL_1TO10_3.mlmodel */,
 			);
 			path = Poses;
 			sourceTree = "<group>";
@@ -311,12 +268,11 @@
 		31E159332732808C00984649 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				31367543283BEB14002806A1 /* ASL_Celebrate.mlmodel */,
+				319D4EE3281053A8005DEF29 /* ASL_Fire_1strain.mlmodel */,
 				315CFC4727FB24BC002A1733 /* ASL_Easter_1strain.mlmodel */,
 				315CFC4527FA93BD002A1733 /* ASL_Ambulance_1strain.mlmodel */,
 				315E793B27DDDFF500BCDBCF /* ASL_YourWelcome2_0_5strain.mlmodel */,
-				3133B14127B55ECE00C5432E /* ISL_Onam_2s_1strain.mlmodel */,
-				3133B14E27B55ECE00C5432E /* ISL_ComeGo2_2s_1strain.mlmodel */,
-				3133B15027B55ECE00C5432E /* ISL_Go3_2s_1strain.mlmodel */,
 				3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */,
 				319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */,
 				319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */,
@@ -327,7 +283,6 @@
 				3133B14D27B55ECE00C5432E /* ASL_Which.mlmodel */,
 				3133B15227B55ECE00C5432E /* ASL_YourWelcome2.mlmodel */,
 				3133B14A27B55ECE00C5432E /* ASL_Christmas2_0_5strain.mlmodel */,
-				3133B15627B55ECF00C5432E /* ISL_Walk_2s_1strain.mlmodel */,
 				31E1591F272EBA8500984649 /* ASL_J2s_1strain.mlmodel */,
 				31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */,
 			);
@@ -613,53 +568,38 @@
 				3133B17427B560D200C5432E /* MyTableViewCell.swift in Sources */,
 				319F769227B5624D0072850D /* ASL_No_0_5strain.mlmodel in Sources */,
 				315E793C27DDDFF500BCDBCF /* ASL_YourWelcome2_0_5strain.mlmodel in Sources */,
-				3133B12627B55E9500C5432E /* ASL_1TO10_3.mlmodel in Sources */,
 				315CFC4827FB24BC002A1733 /* ASL_Easter_1strain.mlmodel in Sources */,
 				3133B16A27B55ECF00C5432E /* ASL_YourWelcome2.mlmodel in Sources */,
 				31E15920272EBA8500984649 /* ASL_J2s_1strain.mlmodel in Sources */,
-				3133B16827B55ECF00C5432E /* ISL_Go3_2s_1strain.mlmodel in Sources */,
-				3133B16627B55ECF00C5432E /* ISL_ComeGo2_2s_1strain.mlmodel in Sources */,
-				3133B13D27B55E9500C5432E /* ASL_KRUV10.mlmodel in Sources */,
-				3133B13827B55E9500C5432E /* ISL_0TO9_9.mlmodel in Sources */,
 				3105B30727B63F19001DA13F /* ASL_Milk_0_5strain.mlmodel in Sources */,
 				3133B12527B55E9500C5432E /* ASL_D.mlmodel in Sources */,
 				3133B11B27B55E9500C5432E /* ASL_AIY7.mlmodel in Sources */,
 				31E15918272E27E000984649 /* ASL_Z2s_1strain.mlmodel in Sources */,
 				315E793427D5246900BCDBCF /* ASL_HOLI10.mlmodel in Sources */,
-				3133B12927B55E9500C5432E /* ASL_GH23.mlmodel in Sources */,
+				319D4EE4281053A8005DEF29 /* ASL_Fire_1strain.mlmodel in Sources */,
 				3105B30327B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel in Sources */,
-				3133B13027B55E9500C5432E /* ASL_MNTA2.mlmodel in Sources */,
+				31CFCBA828316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel in Sources */,
 				C475655E248AEBD900F111B8 /* HandGestureProcessor.swift in Sources */,
-				3133B12D27B55E9500C5432E /* ASL_MinusJZ_4.mlmodel in Sources */,
-				3133B13A27B55E9500C5432E /* ASL_B.mlmodel in Sources */,
 				3133B16527B55ECF00C5432E /* ASL_Which.mlmodel in Sources */,
 				C4EB82EB248AEB7B00CD7D41 /* AppDelegate.swift in Sources */,
-				3133B16E27B55ECF00C5432E /* ISL_Walk_2s_1strain.mlmodel in Sources */,
-				3133B13C27B55E9500C5432E /* ASL_MinusJZ_2.mlmodel in Sources */,
 				3133B11F27B55E9500C5432E /* ASL_I2.mlmodel in Sources */,
 				31E1592C27312C8D00984649 /* CustomTextViewController.swift in Sources */,
 				C4EB82ED248AEB7B00CD7D41 /* SceneDelegate.swift in Sources */,
 				3105B30527B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel in Sources */,
-				3133B15927B55ECF00C5432E /* ISL_Onam_2s_1strain.mlmodel in Sources */,
 				319F769127B5624D0072850D /* ASL_Yes_0_5strain.mlmodel in Sources */,
 				31E159262730283000984649 /* ASL_CO2.mlmodel in Sources */,
-				3133B12C27B55E9500C5432E /* ASL_1TO10_2.mlmodel in Sources */,
 				31E15928273070F200984649 /* ContentTableViewController.swift in Sources */,
 				C475655D248AEBD900F111B8 /* CameraView.swift in Sources */,
 				3133B17227B55FE600C5432E /* Content.swift in Sources */,
-				31EFFE7F27C152E90002EE44 /* ASL_ILoveYou3.mlmodel in Sources */,
 				3133B16227B55ECF00C5432E /* ASL_Christmas2_0_5strain.mlmodel in Sources */,
 				3105B2FF27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel in Sources */,
-				3133B13B27B55E9500C5432E /* ISL_0TO9_10.mlmodel in Sources */,
 				315CFC4627FA93BD002A1733 /* ASL_Ambulance_1strain.mlmodel in Sources */,
+				319D4EE828110769005DEF29 /* ASL_E10.mlmodel in Sources */,
+				31367544283BEB14002806A1 /* ASL_Celebrate.mlmodel in Sources */,
 				315E792C27D1C54000BCDBCF /* ASL_L2.mlmodel in Sources */,
-				3133B11C27B55E9500C5432E /* ASL_BFW.mlmodel in Sources */,
 				314D2F2227B58B3B00EF7D3A /* ASL_Later_0_5strain.mlmodel in Sources */,
-				3133B13927B55E9500C5432E /* ASL_E3.mlmodel in Sources */,
 				31E159302731B2C300984649 /* MyNavigationController.swift in Sources */,
-				3133B13227B55E9500C5432E /* ISL_0TO9_3_i160.mlmodel in Sources */,
 				C475655F248AEBD900F111B8 /* CameraViewController.swift in Sources */,
-				31F7DDDD272B0898004DCDC6 /* ASL_EMNST.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,14 +957,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1043,14 +983,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

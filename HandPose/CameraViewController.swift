@@ -67,6 +67,7 @@ class CameraViewController: UIViewController {
         let navBarOnModal: MyNavigationController = MyNavigationController(rootViewController: secondViewController)
         navBarOnModal.delegateCamera = self
         secondViewController.delegateCameraView = self
+        secondViewController.currentSelectedContent = contentToGet
         self.present(navBarOnModal, animated: true, completion: nil)
     }
     
@@ -662,28 +663,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     posesMultiArray2 = prepareInputWithObservations(poseObservations2)
                 }
                 
-                if text.uppercased() == "ONAM" {
-                    guard let predictions = try? (classifier as? ISL_Onam_2s_1strain)?.prediction(poses: posesMultiArray!) else { return }
-                    print(predictions.label.capitalized)
-                    if predictions.label.uppercased() == text.uppercased() {
-                        processPrediction(label: predictions.label.capitalized)
-                    }
-                }
-                else if text.uppercased() == "COME" {
-                    guard let predictions = try? (classifier as? ISL_ComeGo2_2s_1strain)?.prediction(poses: posesMultiArray!) else { return }
-                    print(predictions.label.capitalized)
-                    if predictions.label.uppercased() == text.uppercased() {
-                        processPrediction(label: predictions.label.capitalized)
-                    }
-                }
-                else if text.uppercased() == "GO" {
-                    guard let predictions = try? (classifier as? ISL_Go3_2s_1strain)?.prediction(poses: posesMultiArray!) else { return }
-                    print(predictions.label.capitalized)
-                    if predictions.label.uppercased() == text.uppercased() {
-                        processPrediction(label: predictions.label.capitalized)
-                    }
-                }
-                else if text.uppercased() == "BATHROOM" {
+                if text.uppercased() == "BATHROOM" {
                     guard let predictions = try? (classifier as? ASL_Bathroom_0_5strain)?.prediction(poses: posesMultiArray!) else { return }
                     print(predictions.label.capitalized)
                     if predictions.label.uppercased() == text.uppercased() {
@@ -717,6 +697,34 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     if predictions.label.uppercased() == text.uppercased() {
                         if posesMultiArray2 != nil {
                             guard let predictions2 = try? (classifier as? ASL_Easter_1strain)?.prediction(poses: posesMultiArray2!) else { return }
+                            print("HAND 2: " + predictions2.label.capitalized)
+                            if predictions2.label.uppercased() == text.uppercased() {
+                                processPrediction(label: predictions2.label.capitalized)
+                            }
+                        }
+                        
+                    }
+                }
+                else if text.uppercased() == "CELEBRATE" {
+                    guard let predictions = try? (classifier as? ASL_Celebrate)?.prediction(poses: posesMultiArray!) else { return }
+                    print("HAND 1: " + predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        if posesMultiArray2 != nil {
+                            guard let predictions2 = try? (classifier as? ASL_Celebrate)?.prediction(poses: posesMultiArray2!) else { return }
+                            print("HAND 2: " + predictions2.label.capitalized)
+                            if predictions2.label.uppercased() == text.uppercased() {
+                                processPrediction(label: predictions2.label.capitalized)
+                            }
+                        }
+                        
+                    }
+                }
+                else if text.uppercased() == "FIRE" {
+                    guard let predictions = try? (classifier as? ASL_Fire_1strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print("HAND 1: " + predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        if posesMultiArray2 != nil {
+                            guard let predictions2 = try? (classifier as? ASL_Fire_1strain)?.prediction(poses: posesMultiArray2!) else { return }
                             print("HAND 2: " + predictions2.label.capitalized)
                             if predictions2.label.uppercased() == text.uppercased() {
                                 processPrediction(label: predictions2.label.capitalized)
@@ -774,13 +782,6 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                         processPrediction(label: predictions.label.capitalized)
                     }
                 }
-                else if text.uppercased() == "WALK" {
-                    guard let predictions = try? (classifier as? ISL_Walk_2s_1strain)?.prediction(poses: posesMultiArray!) else { return }
-                    print(predictions.label.capitalized)
-                    if predictions.label.uppercased() == text.uppercased() {
-                        processPrediction(label: predictions.label.capitalized)
-                    }
-                }
                 return
             }
             if contentToGet?.isFingerspelling == false && contentToGet?.isPose == true {
@@ -805,70 +806,10 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             //Fingerspelling section
             let index = text.index(text.startIndex, offsetBy: currentIndex)
             let nextChar = text[index]
-            if nextChar == "K" || nextChar == "R" || nextChar == "U" || nextChar == "V" {
-                print("Looking for pose: " + String(nextChar))
-                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                            let handPosePrediction = try (classifier as? ASL_KRUV10)?.prediction(poses: keypointsMultiArray)
-                if handPosePrediction != nil {
-                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
-                    if confidence != nil && confidence! > 0.8 {
-                        print("******** "+handPosePrediction!.label+" *****************")
-                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
-                            processPrediction(label: handPosePrediction!.label.capitalized)
-                        }
-                        return
-                    }
-                }
-            }
-            else if nextChar == "H" || nextChar == "O" || nextChar == "I" {
+            if nextChar == "H" || nextChar == "O" || nextChar == "I" {
                 print("Looking for pose: " + String(nextChar))
                 guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
                             let handPosePrediction = try (classifier as? ASL_HOLI10)?.prediction(poses: keypointsMultiArray)
-                if handPosePrediction != nil {
-                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
-                    if confidence != nil && confidence! > 0.8 {
-                        print("******** "+handPosePrediction!.label+" *****************")
-                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
-                            processPrediction(label: handPosePrediction!.label.capitalized)
-                        }
-                        return
-                    }
-                }
-            }
-            else if nextChar == "M" || nextChar == "N" || nextChar == "T" {
-                print("Looking for pose: " + String(nextChar))
-                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                            let handPosePrediction = try (classifier as? ASL_MNTA2)?.prediction(poses: keypointsMultiArray)
-                if handPosePrediction != nil {
-                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
-                    if confidence != nil && confidence! > 0.8 {
-                        print("******** "+handPosePrediction!.label+" *****************")
-                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
-                            processPrediction(label: handPosePrediction!.label.capitalized)
-                        }
-                        return
-                    }
-                }
-            }
-            else if nextChar == "G" || nextChar == "H" {
-                print("Looking for pose: " + String(nextChar))
-                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                            let handPosePrediction = try (classifier as? ASL_GH23)?.prediction(poses: keypointsMultiArray)
-                if handPosePrediction != nil {
-                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
-                    if confidence != nil && confidence! > 0.8 {
-                        print("******** "+handPosePrediction!.label+" *****************")
-                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
-                            processPrediction(label: handPosePrediction!.label.capitalized)
-                        }
-                        return
-                    }
-                }
-            }
-            else if nextChar == "F" || nextChar == "W" {
-                print("Looking for pose: " + String(nextChar))
-                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                            let handPosePrediction = try (classifier as? ASL_BFW)?.prediction(poses: keypointsMultiArray)
                 if handPosePrediction != nil {
                     let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
                     if confidence != nil && confidence! > 0.8 {
@@ -884,21 +825,6 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 print("Looking for pose: " + String(nextChar))
                 guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
                             let handPosePrediction = try (classifier as? ASL_AIY7)?.prediction(poses: keypointsMultiArray)
-                if handPosePrediction != nil {
-                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
-                    if confidence != nil && confidence! > 0.8 {
-                        print("******** "+handPosePrediction!.label+" *****************")
-                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
-                            processPrediction(label: handPosePrediction!.label.capitalized)
-                        }
-                        return
-                    }
-                }
-            }
-            else if nextChar == "B" {
-                print("Looking for pose: " + String(nextChar))
-                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                            let handPosePrediction = try (classifier as? ASL_B)?.prediction(poses: keypointsMultiArray)
                 if handPosePrediction != nil {
                     let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
                     if confidence != nil && confidence! > 0.8 {
@@ -943,22 +869,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             else if nextChar == "E" {
                 print("Looking for pose: " + String(nextChar))
                 guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                            let handPosePrediction = try (classifier as? ASL_E3)?.prediction(poses: keypointsMultiArray)
-                if handPosePrediction != nil {
-                    let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
-                    if confidence != nil && confidence! > 0.8 {
-                        print("******** "+handPosePrediction!.label+" *****************")
-                        if handPosePrediction!.label.uppercased() == nextChar.uppercased() {
-                            processPrediction(label: handPosePrediction!.label.capitalized)
-                        }
-                        return
-                    }
-                }
-            }
-            else if nextChar == "S" {
-                print("Looking for pose: " + String(nextChar))
-                guard let keypointsMultiArray = try? observation.keypointsMultiArray() else { fatalError() }
-                            let handPosePrediction = try (classifier as? ASL_EMNST)?.prediction(poses: keypointsMultiArray)
+                            let handPosePrediction = try (classifier as? ASL_E10)?.prediction(poses: keypointsMultiArray)
                 if handPosePrediction != nil {
                     let confidence = handPosePrediction?.labelProbabilities[handPosePrediction!.label]!
                     if confidence != nil && confidence! > 0.8 {
@@ -1111,23 +1022,11 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         setupStringWithCharacterHighlighted()
         updateBottomUI(text: String(nextChar))
-        if nextChar == "K" || nextChar == "R" || nextChar == "U" || nextChar == "V" {
-            classifier = try? ASL_KRUV10(configuration: MLModelConfiguration())
-        }
-        else if nextChar == "H" || nextChar == "O" || nextChar == "I" {
+        if nextChar == "H" || nextChar == "O" || nextChar == "I" {
             classifier = try? ASL_HOLI10(configuration: MLModelConfiguration())
-        }
-        else if nextChar == "M" || nextChar == "N" || nextChar == "T" {
-            classifier = try? ASL_MNTA2(configuration: MLModelConfiguration())
-        }
-        else if nextChar == "G" || nextChar == "H" {
-            classifier = try? ASL_GH23(configuration: MLModelConfiguration())
         }
         else if nextChar == "A" || nextChar == "Y" {
             classifier = try? ASL_AIY7(configuration: MLModelConfiguration())
-        }
-        else if nextChar == "B" {
-            classifier = try? ASL_B(configuration: MLModelConfiguration())
         }
         else if nextChar == "C" || nextChar == "O" {
             classifier = try? ASL_CO2(configuration: MLModelConfiguration())
@@ -1136,13 +1035,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             classifier = try? ASL_D(configuration: MLModelConfiguration())
         }
         else if nextChar == "E" {
-            classifier = try? ASL_E3(configuration: MLModelConfiguration())
-        }
-        else if nextChar == "B" || nextChar == "W" {
-            classifier = try? ASL_BFW(configuration: MLModelConfiguration())
-        }
-        else if nextChar == "S" {
-            classifier = try? ASL_EMNST(configuration: MLModelConfiguration())
+            classifier = try? ASL_E10(configuration: MLModelConfiguration()) //E3
         }
         else if nextChar == "L" {
             classifier = try? ASL_L2(configuration: MLModelConfiguration())
@@ -1160,16 +1053,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     private func setupNextWord(word : String?) {
         let wordUppercased = word?.uppercased()
-        if wordUppercased == "ONAM" {
-            classifier = try? ISL_Onam_2s_1strain(configuration: MLModelConfiguration())
-        }
-        else if wordUppercased == "COME" {
-            classifier = try? ISL_ComeGo2_2s_1strain(configuration: MLModelConfiguration())
-        }
-        else if wordUppercased == "GO" {
-            classifier = try? ISL_Go3_2s_1strain(configuration: MLModelConfiguration())
-        }
-        else if wordUppercased == "I LOVE YOU" {
+        if wordUppercased == "I LOVE YOU" {
             classifier = try? ASL_ILoveYou3(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "BATHROOM" {
@@ -1186,6 +1070,12 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         else if wordUppercased == "EASTER" {
             classifier = try? ASL_Easter_1strain(configuration: MLModelConfiguration())
+        }
+        else if wordUppercased == "CELEBRATE" {
+            classifier = try? ASL_Celebrate(configuration: MLModelConfiguration())
+        }
+        else if wordUppercased == "FIRE" {
+            classifier = try? ASL_Fire_1strain(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "LATER" {
             classifier = try? ASL_Later_0_5strain(configuration: MLModelConfiguration())
@@ -1207,9 +1097,6 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         else if wordUppercased == "CHRISTMAS" {
             classifier = try? ASL_Christmas2_0_5strain(configuration: MLModelConfiguration())
-        }
-        else if wordUppercased == "WALK" {
-            classifier = try? ISL_Walk_2s_1strain(configuration: MLModelConfiguration())
         }
         updateBottomUI(text: word)
     }
