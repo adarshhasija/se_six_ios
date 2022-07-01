@@ -719,6 +719,13 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                         
                     }
                 }
+                else if text.uppercased() == "TENNIS" {
+                    guard let predictions = try? (classifier as? ASL_Tennis2_1_5strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print(predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        processPrediction(label: predictions.label.capitalized)
+                    }
+                }
                 else if text.uppercased() == "FIRE" {
                     guard let predictions = try? (classifier as? ASL_Fire_1strain)?.prediction(poses: posesMultiArray!) else { return }
                     print("HAND 1: " + predictions.label.capitalized)
@@ -1074,6 +1081,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         else if wordUppercased == "CELEBRATE" {
             classifier = try? ASL_Celebrate(configuration: MLModelConfiguration())
         }
+        else if wordUppercased == "TENNIS" {
+            classifier = try? ASL_Tennis2_1_5strain(configuration: MLModelConfiguration())
+        }
         else if wordUppercased == "FIRE" {
             classifier = try? ASL_Fire_1strain(configuration: MLModelConfiguration())
         }
@@ -1097,6 +1107,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         else if wordUppercased == "CHRISTMAS" {
             classifier = try? ASL_Christmas2_0_5strain(configuration: MLModelConfiguration())
+        }
+        else if wordUppercased == "TWITTER" {
+            //classifier = try? ASL_Twitter_1strain(configuration: MLModelConfiguration())
         }
         updateBottomUI(text: word)
     }

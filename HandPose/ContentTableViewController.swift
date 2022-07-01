@@ -22,6 +22,8 @@ class ContentTableViewController : UITableViewController {
         //Content(text: "NBA", isFingerspelling: true),
         //Content(text: "NFL", isFingerspelling: true),
         Content(text: "Yes"),
+        //Content(text: "No", modelObservationsNeeded: 30), //not working
+        //Content(text: "No"), //working but not well
         //Content(text: "Monday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
         //Content(text: "Tuesday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
         //Content(text: "Wednesday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
@@ -29,10 +31,13 @@ class ContentTableViewController : UITableViewController {
         //Content(text: "Friday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
         //Content(text: "Saturday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
         //Content(text: "Sunday", modelObservationsNeeded: 30, maximumHandCount: 2, links: ["Days_Of_Week"]),
-        //Content(text: "No"), //working but not well
         Content(text: "Ambulance", modelObservationsNeeded: 30),
+        //Content(text: "Library", modelObservationsNeeded: 15), //0.5,1,1.5 all not working
+        //Content(text: "Twitter", modelObservationsNeeded: 30), //not working always
+        //Content(text: "Now", modelObservationsNeeded: 30, maximumHandCount: 2), //Not working
         Content(text: "Fire", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Easter", modelObservationsNeeded: 30, maximumHandCount: 2),
+        Content(text: "Tennis", modelObservationsNeeded: 45),
         Content(text: "Celebrate", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Later"),
         Content(text: "Bathroom"),
