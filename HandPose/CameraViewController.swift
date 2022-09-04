@@ -684,6 +684,20 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                         processPrediction(label: predictions.label.capitalized)
                     }
                 }
+                else if text.uppercased() == "TEACHER" {
+                    guard let predictions = try? (classifier as? ASL_Teacher_1_5strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print("HAND 1: " + predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        if posesMultiArray2 != nil {
+                            guard let predictions2 = try? (classifier as? ASL_Teacher_1_5strain)?.prediction(poses: posesMultiArray2!) else { return }
+                            print("HAND 2: " + predictions2.label.capitalized)
+                            if predictions2.label.uppercased() == text.uppercased() {
+                                processPrediction(label: predictions2.label.capitalized)
+                            }
+                        }
+                        
+                    }
+                }
                 else if text.uppercased() == "AMBULANCE" {
                     guard let predictions = try? (classifier as? ASL_Ambulance_1strain)?.prediction(poses: posesMultiArray!) else { return }
                     print(predictions.label.capitalized)
@@ -1071,6 +1085,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         else if wordUppercased == "NO" {
             classifier = try? ASL_No_0_5strain(configuration: MLModelConfiguration())
+        }
+        else if wordUppercased == "TEACHER" {
+            classifier = try? ASL_Teacher_1_5strain(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "AMBULANCE" {
             classifier = try? ASL_Ambulance_1strain(configuration: MLModelConfiguration())

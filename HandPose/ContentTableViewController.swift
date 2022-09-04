@@ -37,6 +37,7 @@ class ContentTableViewController : UITableViewController {
         //Content(text: "Now", modelObservationsNeeded: 30, maximumHandCount: 2), //Not working
         Content(text: "Fire", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Easter", modelObservationsNeeded: 30, maximumHandCount: 2),
+        Content(text: "Teacher", modelObservationsNeeded: 45, maximumHandCount: 2),
         Content(text: "Tennis", modelObservationsNeeded: 45),
         Content(text: "Celebrate", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Later"),
