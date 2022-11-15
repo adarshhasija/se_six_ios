@@ -32,6 +32,9 @@ class ContentTableViewController : UITableViewController {
         //Content(text: "Saturday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
         //Content(text: "Sunday", modelObservationsNeeded: 30, maximumHandCount: 2, links: ["Days_Of_Week"]),
         Content(text: "Ambulance", modelObservationsNeeded: 30),
+        //Content(text: "Judge", modelObservationsNeeded: 30, maximumHandCount: 2), //It is working but cannot find a good graphic for it. So commenting it out
+        Content(text: "Halloween", modelObservationsNeeded: 30, maximumHandCount: 2),
+        Content(text: "Soccer", modelObservationsNeeded: 30, maximumHandCount: 2),
         //Content(text: "Library", modelObservationsNeeded: 15), //0.5,1,1.5 all not working
         //Content(text: "Twitter", modelObservationsNeeded: 30), //not working always
         //Content(text: "Now", modelObservationsNeeded: 30, maximumHandCount: 2), //Not working
