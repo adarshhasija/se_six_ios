@@ -10,12 +10,17 @@ import Foundation
 
 class Content {
     
+    enum SignLanguageType {
+        case ASL
+        case ISL
+    }
+    
     var text : String
     var isFingerspelling : Bool = false //If yes, the user is meant to go letter by letter
     var isPose : Bool =  false
     var maximumHandCount: Int = 1
     var modelObservationsNeeded : Int = 15 //0.5s. Maybe more for longer actions
-    var signLangType : String = "ASL"
+    var signLangType : SignLanguageType = SignLanguageType.ASL
     var links : [String] = []
     
     init(text : String) {
@@ -53,6 +58,13 @@ class Content {
         self.maximumHandCount = maximumHandCount
     }
     
+    init(text : String, modelObservationsNeeded : Int, maximumHandCount : Int, signLangType: SignLanguageType) {
+        self.text = text
+        self.modelObservationsNeeded = modelObservationsNeeded
+        self.maximumHandCount = maximumHandCount
+        self.signLangType = signLangType
+    }
+    
     init(text : String, modelObservationsNeeded : Int, maximumHandCount : Int, links : [String]) {
         self.text = text
         self.modelObservationsNeeded = modelObservationsNeeded
@@ -66,7 +78,7 @@ class Content {
         self.isPose = isPose
     }
     
-    init(text : String, signLangType: String) {
+    init(text : String, signLangType: SignLanguageType) {
         self.text = text
         self.signLangType = signLangType
     }

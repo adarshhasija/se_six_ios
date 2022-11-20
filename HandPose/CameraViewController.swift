@@ -726,12 +726,26 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                         
                     }
                 }
-                else if text.uppercased() == "SOCCER" {
+                else if text.uppercased() == "SOCCER" && contentToGet?.signLangType == Content.SignLanguageType.ASL {
                     guard let predictions = try? (classifier as? ASL_Soccer1_1strain)?.prediction(poses: posesMultiArray!) else { return }
                     print("HAND 1: " + predictions.label.capitalized)
                     if predictions.label.uppercased() == text.uppercased() {
                         if posesMultiArray2 != nil {
                             guard let predictions2 = try? (classifier as? ASL_Soccer1_1strain)?.prediction(poses: posesMultiArray2!) else { return }
+                            print("HAND 2: " + predictions2.label.capitalized)
+                            if predictions2.label.uppercased() == text.uppercased() {
+                                processPrediction(label: predictions2.label.capitalized)
+                            }
+                        }
+                        
+                    }
+                }
+                else if text.uppercased() == "SOCCER" && contentToGet?.signLangType == Content.SignLanguageType.ISL {
+                    guard let predictions = try? (classifier as? ISL_Soccer_2strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print("HAND 1: " + predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        if posesMultiArray2 != nil {
+                            guard let predictions2 = try? (classifier as? ISL_Soccer_2strain)?.prediction(poses: posesMultiArray2!) else { return }
                             print("HAND 2: " + predictions2.label.capitalized)
                             if predictions2.label.uppercased() == text.uppercased() {
                                 processPrediction(label: predictions2.label.capitalized)
@@ -1137,7 +1151,10 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         else if wordUppercased == "HALLOWEEN" {
             classifier = try? ASL_Halloween2_1strain(configuration: MLModelConfiguration())
         }
-        else if wordUppercased == "SOCCER" {
+        else if wordUppercased ==  "SOCCER" && contentToGet?.signLangType == Content.SignLanguageType.ISL {
+            classifier = try? ISL_Soccer_2strain(configuration: MLModelConfiguration())
+        }
+        else if wordUppercased == "SOCCER" && contentToGet?.signLangType == Content.SignLanguageType.ASL {
             classifier = try? ASL_Soccer1_1strain(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "AMBULANCE" {
@@ -1234,8 +1251,13 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             let newImage = UIImage(named: "open_hand")
             if newImage != nil { startFade(newText: txt, newImage: newImage!) }
         }
+        else if contentToGet?.signLangType == Content.SignLanguageType.ISL {
+            let fileName = "india_flag"
+            let newImage : UIImage? = UIImage(named: fileName)
+            if newImage != nil { startFade(newText: text!, newImage: newImage!) }
+        }
         else {
-            let prefix = contentToGet?.signLangType.uppercased() ?? "ASL"
+            let prefix = "ASL"
             let fileName = prefix + "_" + text!
             let newImage : UIImage? = UIImage(named: fileName)
             if newImage != nil { startFade(newText: text!, newImage: newImage!) }

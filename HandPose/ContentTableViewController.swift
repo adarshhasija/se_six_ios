@@ -35,6 +35,7 @@ class ContentTableViewController : UITableViewController {
         //Content(text: "Judge", modelObservationsNeeded: 30, maximumHandCount: 2), //It is working but cannot find a good graphic for it. So commenting it out
         Content(text: "Halloween", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Soccer", modelObservationsNeeded: 30, maximumHandCount: 2),
+        Content(text: "Soccer", modelObservationsNeeded: 60, maximumHandCount: 2, signLangType: Content.SignLanguageType.ISL),
         //Content(text: "Library", modelObservationsNeeded: 15), //0.5,1,1.5 all not working
         //Content(text: "Twitter", modelObservationsNeeded: 30), //not working always
         //Content(text: "Now", modelObservationsNeeded: 30, maximumHandCount: 2), //Not working
@@ -105,13 +106,13 @@ class ContentTableViewController : UITableViewController {
         let content = contentList[indexPath.row]
         cell.title.text = content.text
         //cell.textLabel?.text = mode.text //if default cell type
-        if content.signLangType.uppercased() == "ISL" {
+        if content.signLangType == Content.SignLanguageType.ISL {
             let fileName = "india_flag"
             let newImage : UIImage? = UIImage(named: fileName)
             cell.leadingImageView.image = newImage
             
             cell.signLangType.isHidden = false
-            cell.signLangType.text = content.signLangType
+            cell.signLangType.text = "Indian Sign Language"
         }
         else {
             let fileName = "ASL_" + content.text

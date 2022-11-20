@@ -64,6 +64,7 @@
 		31E15928273070F200984649 /* ContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E15927273070F200984649 /* ContentTableViewController.swift */; };
 		31E1592C27312C8D00984649 /* CustomTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1592B27312C8D00984649 /* CustomTextViewController.swift */; };
 		31E159302731B2C300984649 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1592F2731B2C300984649 /* MyNavigationController.swift */; };
+		31EAADC22927DA70004A9D9E /* ISL_Soccer_2strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31EAADC12927DA70004A9D9E /* ISL_Soccer_2strain.mlmodel */; };
 		C475655D248AEBD900F111B8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655A248AEBD800F111B8 /* CameraView.swift */; };
 		C475655E248AEBD900F111B8 /* HandGestureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655B248AEBD800F111B8 /* HandGestureProcessor.swift */; };
 		C475655F248AEBD900F111B8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475655C248AEBD900F111B8 /* CameraViewController.swift */; };
@@ -159,6 +160,7 @@
 		31E15927273070F200984649 /* ContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewController.swift; sourceTree = "<group>"; };
 		31E1592B27312C8D00984649 /* CustomTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextViewController.swift; sourceTree = "<group>"; };
 		31E1592F2731B2C300984649 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		31EAADC12927DA70004A9D9E /* ISL_Soccer_2strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ISL_Soccer_2strain.mlmodel; sourceTree = "<group>"; };
 		72CC35B8245EF9E709BBCA67 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		C475655A248AEBD800F111B8 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		C475655B248AEBD800F111B8 /* HandGestureProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandGestureProcessor.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		31E159332732808C00984649 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				31EAADC12927DA70004A9D9E /* ISL_Soccer_2strain.mlmodel */,
 				3129F6DA291158D100775CC3 /* ASL_Soccer1_1strain.mlmodel */,
 				3129F6D8291158BE00775CC3 /* ASL_Halloween2_1strain.mlmodel */,
 				3129F6D6291158A300775CC3 /* ASL_Judge2_1strain.mlmodel */,
@@ -581,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3133B17427B560D200C5432E /* MyTableViewCell.swift in Sources */,
+				31EAADC22927DA70004A9D9E /* ISL_Soccer_2strain.mlmodel in Sources */,
 				319F769227B5624D0072850D /* ASL_No_0_5strain.mlmodel in Sources */,
 				315E793C27DDDFF500BCDBCF /* ASL_YourWelcome2_0_5strain.mlmodel in Sources */,
 				315CFC4827FB24BC002A1733 /* ASL_Easter_1strain.mlmodel in Sources */,
