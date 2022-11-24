@@ -31,6 +31,9 @@ class ContentTableViewController : UITableViewController {
         //Content(text: "Friday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
         //Content(text: "Saturday", modelObservationsNeeded: 30, links: ["Days_Of_Week"]),
         //Content(text: "Sunday", modelObservationsNeeded: 30, maximumHandCount: 2, links: ["Days_Of_Week"]),
+        Content(text: "Thanksgiving", modelObservationsNeeded: 30),
+        //Content(text: "Turkey", modelObservationsNeeded: 45), //working horizontally but not vertically
+        //Content(text: "Family", modelObservationsNeeded: 60, maximumHandCount: 2), //Not working. Was showing as correct even with both hands in start position and not moving
         Content(text: "Ambulance", modelObservationsNeeded: 30),
         //Content(text: "Judge", modelObservationsNeeded: 30, maximumHandCount: 2), //It is working but cannot find a good graphic for it. So commenting it out
         Content(text: "Halloween", modelObservationsNeeded: 30, maximumHandCount: 2),

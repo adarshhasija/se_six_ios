@@ -712,6 +712,13 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                         
                     }
                 }
+                else if text.uppercased() == "THANKSGIVING" {
+                    guard let predictions = try? (classifier as? ASL_ThanksgivingTurkey2_1strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print(predictions.label.capitalized)
+                    if predictions.label.uppercased() == text.uppercased() {
+                        processPrediction(label: predictions.label.capitalized)
+                    }
+                }
                 else if text.uppercased() == "HALLOWEEN" {
                     guard let predictions = try? (classifier as? ASL_Halloween2_1strain)?.prediction(poses: posesMultiArray!) else { return }
                     print("HAND 1: " + predictions.label.capitalized)
@@ -1147,6 +1154,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         else if wordUppercased == "JUDGE" {
             classifier = try? ASL_Judge2_1strain(configuration: MLModelConfiguration())
+        }
+        else if wordUppercased == "THANKSGIVING" {
+            classifier = try? ASL_ThanksgivingTurkey2_1strain(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "HALLOWEEN" {
             classifier = try? ASL_Halloween2_1strain(configuration: MLModelConfiguration())
