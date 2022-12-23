@@ -860,7 +860,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     }
                 }
                 else if text.uppercased() == "CHRISTMAS" {
-                    guard let predictions = try? (classifier as? ASL_Christmas2_0_5strain)?.prediction(poses: posesMultiArray!) else { return }
+                    guard let predictions = try? (classifier as? ASL_Christmas3_1strain)?.prediction(poses: posesMultiArray!) else { return }
                     print(predictions.label.capitalized)
                     if predictions.label.uppercased() == text.uppercased() {
                         processPrediction(label: predictions.label.capitalized)
@@ -1201,7 +1201,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             classifier = try? ASL_YourWelcome2(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "CHRISTMAS" {
-            classifier = try? ASL_Christmas2_0_5strain(configuration: MLModelConfiguration())
+            classifier = try? ASL_Christmas3_1strain(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "TWITTER" {
             //classifier = try? ASL_Twitter_1strain(configuration: MLModelConfiguration())

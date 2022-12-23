@@ -37,8 +37,9 @@ class ContentTableViewController : UITableViewController {
         Content(text: "Ambulance", modelObservationsNeeded: 30),
         //Content(text: "Judge", modelObservationsNeeded: 30, maximumHandCount: 2), //It is working but cannot find a good graphic for it. So commenting it out
         Content(text: "Halloween", modelObservationsNeeded: 30, maximumHandCount: 2),
+        Content(text: "Christmas", modelObservationsNeeded: 30), //Christmas4 = with Wave detection. Not working correctly
         Content(text: "Soccer", modelObservationsNeeded: 30, maximumHandCount: 2),
-        Content(text: "Soccer", modelObservationsNeeded: 60, maximumHandCount: 2, signLangType: Content.SignLanguageType.ISL),
+        //Content(text: "Soccer", modelObservationsNeeded: 60, maximumHandCount: 2, signLangType: Content.SignLanguageType.ISL), //Works but we are not keeping ISL content At the mmoment (Dec 2022)
         //Content(text: "Library", modelObservationsNeeded: 15), //0.5,1,1.5 all not working
         //Content(text: "Twitter", modelObservationsNeeded: 30), //not working always
         //Content(text: "Now", modelObservationsNeeded: 30, maximumHandCount: 2), //Not working
@@ -54,7 +55,6 @@ class ContentTableViewController : UITableViewController {
         Content(text: "CODA", isFingerspelling: true),
         Content(text: "HOLI", isFingerspelling: true),
         Content(text: "EID", isFingerspelling: true),
-        //Content(text: "Christmas"), working but not well
         //Content(text: "USA", isFingerspelling: true),
         //Content(text: "Which"), //works but needs 2 hands
         //Content(text: "Car"), //Not yet done

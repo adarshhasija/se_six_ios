@@ -37,7 +37,6 @@
 		3133B11B27B55E9500C5432E /* ASL_AIY7.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F227B55E9300C5432E /* ASL_AIY7.mlmodel */; };
 		3133B11F27B55E9500C5432E /* ASL_I2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0F627B55E9300C5432E /* ASL_I2.mlmodel */; };
 		3133B12527B55E9500C5432E /* ASL_D.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B0FC27B55E9300C5432E /* ASL_D.mlmodel */; };
-		3133B16227B55ECF00C5432E /* ASL_Christmas2_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B14A27B55ECE00C5432E /* ASL_Christmas2_0_5strain.mlmodel */; };
 		3133B16527B55ECF00C5432E /* ASL_Which.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B14D27B55ECE00C5432E /* ASL_Which.mlmodel */; };
 		3133B16A27B55ECF00C5432E /* ASL_YourWelcome2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3133B15227B55ECE00C5432E /* ASL_YourWelcome2.mlmodel */; };
 		3133B17227B55FE600C5432E /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133B17127B55FE600C5432E /* Content.swift */; };
@@ -57,6 +56,7 @@
 		319F769127B5624D0072850D /* ASL_Yes_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */; };
 		319F769227B5624D0072850D /* ASL_No_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */; };
 		31AA5E03286D688B00B65342 /* ASL_Tennis2_1_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31AA5E02286D688B00B65342 /* ASL_Tennis2_1_5strain.mlmodel */; };
+		31B1B1BF29556FDB0048819E /* ASL_Christmas3_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31B1B1BE29556FDB0048819E /* ASL_Christmas3_1strain.mlmodel */; };
 		31C1D695292FF07800CB5BA7 /* ASL_ThanksgivingTurkey2_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31C1D694292FF07800CB5BA7 /* ASL_ThanksgivingTurkey2_1strain.mlmodel */; };
 		31CFCBA828316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31CFCBA728316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel */; };
 		31E15918272E27E000984649 /* ASL_Z2s_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */; };
@@ -136,7 +136,6 @@
 		3133B0F227B55E9300C5432E /* ASL_AIY7.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_AIY7.mlmodel; sourceTree = "<group>"; };
 		3133B0F627B55E9300C5432E /* ASL_I2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_I2.mlmodel; sourceTree = "<group>"; };
 		3133B0FC27B55E9300C5432E /* ASL_D.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_D.mlmodel; sourceTree = "<group>"; };
-		3133B14A27B55ECE00C5432E /* ASL_Christmas2_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Christmas2_0_5strain.mlmodel; sourceTree = "<group>"; };
 		3133B14D27B55ECE00C5432E /* ASL_Which.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Which.mlmodel; sourceTree = "<group>"; };
 		3133B15227B55ECE00C5432E /* ASL_YourWelcome2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_YourWelcome2.mlmodel; sourceTree = "<group>"; };
 		3133B17127B55FE600C5432E /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		319F768F27B5624C0072850D /* ASL_Yes_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Yes_0_5strain.mlmodel; sourceTree = "<group>"; };
 		319F769027B5624D0072850D /* ASL_No_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_No_0_5strain.mlmodel; sourceTree = "<group>"; };
 		31AA5E02286D688B00B65342 /* ASL_Tennis2_1_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Tennis2_1_5strain.mlmodel; sourceTree = "<group>"; };
+		31B1B1BE29556FDB0048819E /* ASL_Christmas3_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Christmas3_1strain.mlmodel; sourceTree = "<group>"; };
 		31C1D694292FF07800CB5BA7 /* ASL_ThanksgivingTurkey2_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ThanksgivingTurkey2_1strain.mlmodel; sourceTree = "<group>"; };
 		31CFCBA728316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_ILoveYou3.mlmodel; sourceTree = "<group>"; };
 		31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Z2s_1strain.mlmodel; sourceTree = "<group>"; };
@@ -282,6 +282,7 @@
 		31E159332732808C00984649 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				31B1B1BE29556FDB0048819E /* ASL_Christmas3_1strain.mlmodel */,
 				31C1D694292FF07800CB5BA7 /* ASL_ThanksgivingTurkey2_1strain.mlmodel */,
 				31EAADC12927DA70004A9D9E /* ISL_Soccer_2strain.mlmodel */,
 				3129F6DA291158D100775CC3 /* ASL_Soccer1_1strain.mlmodel */,
@@ -303,7 +304,6 @@
 				3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */,
 				3133B14D27B55ECE00C5432E /* ASL_Which.mlmodel */,
 				3133B15227B55ECE00C5432E /* ASL_YourWelcome2.mlmodel */,
-				3133B14A27B55ECE00C5432E /* ASL_Christmas2_0_5strain.mlmodel */,
 				31E1591F272EBA8500984649 /* ASL_J2s_1strain.mlmodel */,
 				31E15917272E27E000984649 /* ASL_Z2s_1strain.mlmodel */,
 			);
@@ -601,6 +601,7 @@
 				315E793427D5246900BCDBCF /* ASL_HOLI10.mlmodel in Sources */,
 				319D4EE4281053A8005DEF29 /* ASL_Fire_1strain.mlmodel in Sources */,
 				3105B30327B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel in Sources */,
+				31B1B1BF29556FDB0048819E /* ASL_Christmas3_1strain.mlmodel in Sources */,
 				31CFCBA828316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel in Sources */,
 				C475655E248AEBD900F111B8 /* HandGestureProcessor.swift in Sources */,
 				3133B16527B55ECF00C5432E /* ASL_Which.mlmodel in Sources */,
@@ -616,7 +617,6 @@
 				C475655D248AEBD900F111B8 /* CameraView.swift in Sources */,
 				31C1D695292FF07800CB5BA7 /* ASL_ThanksgivingTurkey2_1strain.mlmodel in Sources */,
 				3133B17227B55FE600C5432E /* Content.swift in Sources */,
-				3133B16227B55ECF00C5432E /* ASL_Christmas2_0_5strain.mlmodel in Sources */,
 				3105B2FF27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel in Sources */,
 				315CFC4627FA93BD002A1733 /* ASL_Ambulance_1strain.mlmodel in Sources */,
 				319D4EE828110769005DEF29 /* ASL_E10.mlmodel in Sources */,
@@ -985,14 +985,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1013,14 +1013,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
