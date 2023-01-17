@@ -39,6 +39,7 @@ class ContentTableViewController : UITableViewController {
         Content(text: "Halloween", modelObservationsNeeded: 30, maximumHandCount: 2),
         Content(text: "Christmas", modelObservationsNeeded: 30), //Christmas4 = with Wave detection. Not working correctly
         Content(text: "Soccer", modelObservationsNeeded: 30, maximumHandCount: 2),
+        Content(text: "Hockey", modelObservationsNeeded: 30, maximumHandCount: 2),
         //Content(text: "Soccer", modelObservationsNeeded: 60, maximumHandCount: 2, signLangType: Content.SignLanguageType.ISL), //Works but we are not keeping ISL content At the mmoment (Dec 2022)
         //Content(text: "Library", modelObservationsNeeded: 15), //0.5,1,1.5 all not working
         //Content(text: "Twitter", modelObservationsNeeded: 30), //not working always

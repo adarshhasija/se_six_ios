@@ -866,6 +866,21 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                         processPrediction(label: predictions.label.capitalized)
                     }
                 }
+                else if text.uppercased() == "HOCKEY" {
+                    guard let predictions = try? (classifier as? ASL_Hockey2_1strain)?.prediction(poses: posesMultiArray!) else { return }
+                    print("HAND 1: " + predictions.label.capitalized)
+                    //During debugging, FLAT_HAND has come up as the more visible hand so that is Hand 1
+                    if predictions.label.uppercased() == "FLAT_HAND" {
+                        if posesMultiArray2 != nil {
+                            guard let predictions2 = try? (classifier as? ASL_Hockey2_1strain)?.prediction(poses: posesMultiArray2!) else { return }
+                            print("HAND 2: " + predictions2.label.capitalized)
+                            if predictions2.label.uppercased() == text.uppercased() {
+                                processPrediction(label: predictions2.label.capitalized)
+                            }
+                        }
+                        
+                    }
+                }
                 return
             }
             if contentToGet?.isFingerspelling == false && contentToGet?.isPose == true {
@@ -1202,6 +1217,9 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         else if wordUppercased == "CHRISTMAS" {
             classifier = try? ASL_Christmas3_1strain(configuration: MLModelConfiguration())
+        }
+        else if wordUppercased == "HOCKEY" {
+            classifier = try? ASL_Hockey2_1strain(configuration: MLModelConfiguration())
         }
         else if wordUppercased == "TWITTER" {
             //classifier = try? ASL_Twitter_1strain(configuration: MLModelConfiguration())

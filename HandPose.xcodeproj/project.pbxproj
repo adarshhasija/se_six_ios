@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310157102974374400B8A08D /* ASL_Hockey2_1strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3101570F2974374400B8A08D /* ASL_Hockey2_1strain.mlmodel */; };
 		3105B2FF27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B2FE27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel */; };
 		3105B30327B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */; };
 		3105B30527B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */; };
@@ -108,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		26547FACF06954AF783E23D9 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		3101570F2974374400B8A08D /* ASL_Hockey2_1strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Hockey2_1strain.mlmodel; sourceTree = "<group>"; };
 		3105B2FE27B619E8001DA13F /* ASL_Where_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Where_0_5strain.mlmodel; sourceTree = "<group>"; };
 		3105B30227B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Bathroom_0_5strain.mlmodel; sourceTree = "<group>"; };
 		3105B30427B628EB001DA13F /* ASL_Goodbye_0_5strain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASL_Goodbye_0_5strain.mlmodel; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		31E159332732808C00984649 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				3101570F2974374400B8A08D /* ASL_Hockey2_1strain.mlmodel */,
 				31B1B1BE29556FDB0048819E /* ASL_Christmas3_1strain.mlmodel */,
 				31C1D694292FF07800CB5BA7 /* ASL_ThanksgivingTurkey2_1strain.mlmodel */,
 				31EAADC12927DA70004A9D9E /* ISL_Soccer_2strain.mlmodel */,
@@ -601,6 +604,7 @@
 				315E793427D5246900BCDBCF /* ASL_HOLI10.mlmodel in Sources */,
 				319D4EE4281053A8005DEF29 /* ASL_Fire_1strain.mlmodel in Sources */,
 				3105B30327B62853001DA13F /* ASL_Bathroom_0_5strain.mlmodel in Sources */,
+				310157102974374400B8A08D /* ASL_Hockey2_1strain.mlmodel in Sources */,
 				31B1B1BF29556FDB0048819E /* ASL_Christmas3_1strain.mlmodel in Sources */,
 				31CFCBA828316BEA008EA0E0 /* ASL_ILoveYou3.mlmodel in Sources */,
 				C475655E248AEBD900F111B8 /* HandGestureProcessor.swift in Sources */,
@@ -985,14 +989,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.11;
+				MARKETING_VERSION = 1.0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1013,14 +1017,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandPose/HandPose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = B66JCRW7R4;
 				INFOPLIST_FILE = HandPose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.11;
+				MARKETING_VERSION = 1.0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.starsearth.six;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
